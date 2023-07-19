@@ -1,5 +1,5 @@
 # Kumio
 
-A research project aT Istanbul Technical University
+A research project at Istanbul Technical University
 
 Contact us: kumio.itu0@gmail.com
