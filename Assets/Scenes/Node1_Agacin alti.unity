@@ -1158,13 +1158,14 @@ GameObject:
   m_Component:
   - component: {fileID: 451804451}
   - component: {fileID: 451804450}
+  - component: {fileID: 451804452}
   m_Layer: 0
   m_Name: Anlati
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &451804450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1175,8 +1176,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec492c2fb9794df4d9456e0498c884c0, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: e3b9603893c93f64e85caff2c74d68ee, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1275,6 +1276,20 @@ Transform:
   m_Father: {fileID: 296809406}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451804452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451804449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c4ea24a457e1740bbc589befc81416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 451804450}
+  delayInSeconds: 1
 --- !u!1001 &452283056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3897,7 +3912,6 @@ Transform:
   m_Children:
   - {fileID: 1643837487}
   - {fileID: 1000571298}
-  - {fileID: 1892745979}
   m_Father: {fileID: 1544566259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5442,12 +5456,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1544566259}
   m_Layer: 0
-  m_Name: StartButton
+  m_Name: StartNextSceneButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1544566259
 Transform:
   m_ObjectHideFlags: 0
@@ -5460,6 +5474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 999039852}
+  - {fileID: 1892745979}
   m_Father: {fileID: 296809406}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7257,12 +7272,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892745978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.10499999, z: 0.5792999}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0065727234}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1746577763}
-  m_Father: {fileID: 999039852}
-  m_RootOrder: 2
+  m_Father: {fileID: 1544566259}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1892745980
 MonoBehaviour:
@@ -7273,12 +7288,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892745978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98bb01229b7c3d4488ef5c84570f0c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 12abc0142945ae746be2012a97b1c942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDeactivate: {fileID: 1544566258}
-  objectToActivate: {fileID: 451804449}
-  delay: 2
+  sceneToLoad: Node1_Agacin alti
+  buttonToActivate: {fileID: 1892745983}
+  delayInSeconds: 3
 --- !u!114 &1892745981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7426,16 +7441,16 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1892745980}
-        m_TargetAssemblyTypeName: SwitchObjectsButton, Assembly-CSharp
-        m_MethodName: SwitchObjectsDelayed
-        m_Mode: 1
+      - m_Target: {fileID: 11500000, guid: 12abc0142945ae746be2012a97b1c942, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Node1_Agacin alti
           m_BoolArgument: 0
         m_CallState: 2
   Events:
@@ -7571,7 +7586,7 @@ MonoBehaviour:
   TouchBegin:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1892745980}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchObjectsButton, Assembly-CSharp
         m_MethodName: SwitchObjectsDelayed
         m_Mode: 1
@@ -7613,10 +7628,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 1892745980}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
