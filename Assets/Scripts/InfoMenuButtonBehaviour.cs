@@ -1,71 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Microsoft.MixedReality.Toolkit.UI;
+
+
 
 public class InfoMenuButtonBehaviour : MonoBehaviour
 {
-    [SerializeField] private Manager gameManager;
-    [SerializeField] private NarratorManager narrator;
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] private AudioClip busyAudioClip;
-
-    [SerializeField] private int narrationId;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject infoCardPrefab;
     [SerializeField] private SpriteRenderer icon;
-    [SerializeField] private List<Sprite> icons;
+    [SerializeField] private Sprite normalIcon;
+    [SerializeField] private Sprite collectedIcon;
+    [SerializeField] private Sprite openedIcon;
+    private GameObject instantiatedInfoCard;
+    private ButtonState currentState = ButtonState.Normal;
+    private Interactable interactable;
 
-    void Start()
+    private void Start()
     {
-        gameManager = FindAnyObjectByType<Manager>();
-        narrator = FindAnyObjectByType<NarratorManager>();
+        interactable = GetComponent<Interactable>();
+        interactable.OnClick.AddListener(ToggleInfoCard);
+        audioSource.loop = false;
     }
 
-    void Update()
+    private void Update()
     {
-        if (narrator.isBusy)
+        if (!audioSource.isPlaying && instantiatedInfoCard == null)
         {
-            audioSource.Stop();
-            audioSource.clip = null;
-        }
-
-        if (narrationId < gameManager.listenedNarrations.Count && gameManager.listenedNarrations[narrationId] != null)
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = true;
-
-            if (audioSource.clip == gameManager.listenedNarrations[narrationId])
-            {
-                icon.sprite = icons[2];
-            }
-            else
-            {
-                icon.sprite = icons[0];
-            }
-        }
-        else
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-            icon.sprite = icons[1];
+            icon.sprite = collectedIcon;
+            currentState = ButtonState.Collected;
         }
     }
 
-    public void ToggleNarration()
+    private void ToggleInfoCard()
     {
-        if (!narrator.isBusy)
+        switch (currentState)
         {
-            audioSource.Stop();
-            if (audioSource.clip == gameManager.listenedNarrations[narrationId])
-            {
-                audioSource.clip = null;
-            }
-            else
-            {
-                audioSource.clip = gameManager.listenedNarrations[narrationId];
-                audioSource.Play();
-            }
+            case ButtonState.Normal:
+                break;
+            case ButtonState.Collected:
+                float distanceFromUser = 2.0f;
+                Vector3 userPosition = Camera.main.transform.position;
+                Vector3 userForward = Camera.main.transform.forward;
+                Vector3 spawnPosition = userPosition + userForward * distanceFromUser;
+                Quaternion rotation = Quaternion.Euler(0, 180, 0);
+                instantiatedInfoCard = Instantiate(infoCardPrefab, spawnPosition, rotation);
+                icon.sprite = openedIcon;
+                currentState = ButtonState.Opened;
+                break;
+            case ButtonState.Opened:
+                Destroy(instantiatedInfoCard);
+                instantiatedInfoCard = null;
+                icon.sprite = collectedIcon;
+                currentState = ButtonState.Collected;
+                break;
         }
-        else
-        {
-            AudioSource.PlayClipAtPoint(busyAudioClip, transform.position);
-        }
+    }
+
+    private enum ButtonState
+    {
+        Normal,
+        Collected,
+        Opened
     }
 }

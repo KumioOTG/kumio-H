@@ -10,6 +10,8 @@ TagManager:
   - detectable
   - Target
   - Collectible
+  - Coin
+  - IndexTip
   layers:
   - Default
   - TransparentFX

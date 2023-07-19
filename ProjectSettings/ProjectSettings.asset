@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: kumio
-  productName: narratorTest
+  productName: KGO_test1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -135,7 +135,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 8344819114775255644, guid: 14b6a81c57829364d94901c711c3a054, type: 2}
+  - {fileID: 5032362436390545125, guid: ef7ab6d2467dc864496dee3e718cf9f6, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -623,7 +625,7 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: narratorTest
+  metroPackageName: KGOtest1
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
@@ -632,7 +634,7 @@ PlayerSettings:
   metroCertificateNotAfter: 80d873553473da01
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: narratorTest
+  metroTileShortName: KGO_test1
   metroTileShowName: 0
   metroMediumTileShowName: 1
   metroLargeTileShowName: 1
