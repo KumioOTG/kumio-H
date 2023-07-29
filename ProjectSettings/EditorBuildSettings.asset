@@ -5,12 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Node0_Giris.unity
     guid: 7d5547d1d08bbc044b656cca162d33aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Node1_Agacin alti.unity
     guid: e99bb54bdd8ccf94fbc7b5981270a300
+  - enabled: 1
+    path: Assets/Scenes/KG-AR_Test1.unity
+    guid: aabfe65cac403054dadbe10a56c60201
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ef7ab6d2467dc864496dee3e718cf9f6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 14b6a81c57829364d94901c711c3a054, type: 2}
