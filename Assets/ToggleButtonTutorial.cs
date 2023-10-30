@@ -45,7 +45,7 @@ public class ToggleButtonTutorial : MonoBehaviour
         }
     }
 
-    void OnButtonClick()
+    public void OnButtonClick()
     {
         if (associatedCoin != null && !isClickedBefore)
         {
