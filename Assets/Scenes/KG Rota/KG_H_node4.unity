@@ -821,8 +821,8 @@ Transform:
   - {fileID: 451804451}
   - {fileID: 1816366438}
   - {fileID: 1544566259}
-  - {fileID: 249072787}
   - {fileID: 1942779754}
+  - {fileID: 249072787}
   - {fileID: 397866387}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1008,6 +1008,7 @@ GameObject:
   - component: {fileID: 451804451}
   - component: {fileID: 451804450}
   - component: {fileID: 451804452}
+  - component: {fileID: 451804453}
   m_Layer: 0
   m_Name: Anlati
   m_TagString: Untagged
@@ -1132,13 +1133,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451804449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04c4ea24a457e1740bbc589befc81416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 451804450}
   delayInSeconds: 1
+--- !u!114 &451804453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451804449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
 --- !u!1 &487866777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7767,6 +7781,7 @@ GameObject:
   - component: {fileID: 1816366438}
   - component: {fileID: 1816366437}
   - component: {fileID: 1816366436}
+  - component: {fileID: 1816366435}
   m_Layer: 0
   m_Name: Anlati2
   m_TagString: Untagged
@@ -7774,6 +7789,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &1816366435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816366434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 1544566258}
 --- !u!114 &1816366436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8567,7 +8595,7 @@ Transform:
   - {fileID: 782476875}
   - {fileID: 1432792409}
   m_Father: {fileID: 317839835}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -89, z: 0}
 --- !u!1001 &1969486772
 PrefabInstance:

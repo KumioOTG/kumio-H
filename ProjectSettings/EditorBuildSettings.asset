@@ -35,6 +35,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KG Rota/KG_H_node8.unity
     guid: dcf43f0ba10bc3b45814ebe20c3f2ac6
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node8-1.unity
+    guid: 06f2e6aca83249b4297dc45b40cdc6f1
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node8-2.unity
+    guid: c2915defcf5005f4bba21390eb894879
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node8-3.unity
+    guid: 8588ce52b174e4e42944b71f1eb3f0ff
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node9.unity
+    guid: defa474145c68184b9c9d6baa2fe95ed
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node9-1.unity
+    guid: bc439dc7615601f4bb6446f4e4e5d434
+  - enabled: 1
+    path: Assets/Scenes/KG Rota/KG_H_node9-2.unity
+    guid: 844b73161c6653a46847929e64040db1
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ef7ab6d2467dc864496dee3e718cf9f6, type: 2}

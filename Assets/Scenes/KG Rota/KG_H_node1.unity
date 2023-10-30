@@ -1377,7 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451804451}
   - component: {fileID: 451804450}
-  - component: {fileID: 451804452}
+  - component: {fileID: 451804453}
   m_Layer: 0
   m_Name: Anlati
   m_TagString: Untagged
@@ -1495,7 +1495,7 @@ Transform:
   m_Father: {fileID: 296809406}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &451804452
+--- !u!114 &451804453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1504,11 +1504,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 451804449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c4ea24a457e1740bbc589befc81416, type: 3}
+  m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 451804450}
-  delayInSeconds: 1
+  objectToActivate: {fileID: 1544566258}
 --- !u!1 &478593752
 GameObject:
   m_ObjectHideFlags: 0
