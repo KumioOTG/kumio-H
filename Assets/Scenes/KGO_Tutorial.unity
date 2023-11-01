@@ -20584,11 +20584,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1ca041097398fa14aa16181eb66454d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 1031dfd03e44555428d79eec2568aecc, type: 2}
     - target: {fileID: -7511558181221131132, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 1ca041097398fa14aa16181eb66454d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 1031dfd03e44555428d79eec2568aecc, type: 2}
     - target: {fileID: 919132149155446097, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Name
       value: mermi

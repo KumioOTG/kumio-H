@@ -734,10 +734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 4
-  speed: 4
-  MakeSourceStationary: 1
-  positionOffset: 0
 --- !u!108 &293600877
 Light:
   m_ObjectHideFlags: 0
@@ -1453,10 +1449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 4
-  speed: 4
-  MakeSourceStationary: 1
-  positionOffset: 0
 --- !u!108 &549083491
 Light:
   m_ObjectHideFlags: 0
@@ -3429,10 +3421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 4
-  speed: 4
-  MakeSourceStationary: 1
-  positionOffset: 0
 --- !u!108 &1125279985
 Light:
   m_ObjectHideFlags: 0
