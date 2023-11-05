@@ -10,49 +10,67 @@ using Microsoft.MixedReality.Toolkit.UI;
 
 public class InfoMenuButtonBehaviour3 : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource; // Assign this in the inspector
+    [SerializeField] private AudioSource firstAudioSource; // Assign the first AudioSource in the inspector
+    [SerializeField] private AudioSource secondAudioSource; // Assign the second AudioSource in the inspector
     [SerializeField] private GameObject infoCardPrefab;
     [SerializeField] private SpriteRenderer icon;
-    [SerializeField] private Sprite normalIcon;
     [SerializeField] private Sprite collectedIcon;
     [SerializeField] private Sprite openedIcon;
     private GameObject instantiatedInfoCard;
     private ButtonState currentState = ButtonState.Collected;
     private Interactable interactable;
+    private bool isFirstPress = true; // Flag to check if it's the first press
 
     private void Start()
     {
         interactable = GetComponent<Interactable>();
         interactable.OnClick.AddListener(ToggleInfoCard);
-        audioSource.loop = false;
+        firstAudioSource.loop = false;
+        secondAudioSource.loop = false;
     }
 
     private void ToggleInfoCard()
     {
-        switch (currentState)
+        // Instantiate or destroy the info card depending on the current state
+        if (currentState == ButtonState.Opened)
         {
-            case ButtonState.Opened:
-                // If in Opened state, destroy the info card, change to Collected state
-                if (instantiatedInfoCard != null)
-                {
-                    Destroy(instantiatedInfoCard);
-                    instantiatedInfoCard = null;
-                }
-                icon.sprite = collectedIcon;
-                currentState = ButtonState.Collected;
-                break;
-
-            case ButtonState.Collected:
-                // If in Collected state, instantiate the info card, change to Opened state
-                InstantiateInfoCard(); // Instantiate the info card
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.Play(); // Play audio
-                }
-                icon.sprite = openedIcon; // Change to opened icon
-                currentState = ButtonState.Opened;
-                break;
+            CloseInfoCard();
         }
+        else if (currentState == ButtonState.Collected)
+        {
+            OpenInfoCard();
+        }
+
+        // Play the first audio source on first press, second audio source on second press
+        if (isFirstPress)
+        {
+            firstAudioSource.Play();
+        }
+        else
+        {
+            secondAudioSource.Play();
+        }
+
+        // Toggle the isFirstPress flag
+        isFirstPress = !isFirstPress;
+    }
+
+    private void OpenInfoCard()
+    {
+        InstantiateInfoCard();
+        icon.sprite = openedIcon;
+        currentState = ButtonState.Opened;
+    }
+
+    private void CloseInfoCard()
+    {
+        if (instantiatedInfoCard != null)
+        {
+            Destroy(instantiatedInfoCard);
+            instantiatedInfoCard = null;
+        }
+        icon.sprite = collectedIcon;
+        currentState = ButtonState.Collected;
     }
 
     private void InstantiateInfoCard()
@@ -63,14 +81,13 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
             Vector3 userPosition = Camera.main.transform.position;
             Vector3 userForward = Camera.main.transform.forward;
             Vector3 spawnPosition = userPosition + userForward * distanceFromUser;
-            Quaternion rotation = Quaternion.Euler(0, 180, 0);
+            Quaternion rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
             instantiatedInfoCard = Instantiate(infoCardPrefab, spawnPosition, rotation);
         }
     }
 
     private enum ButtonState
     {
-        
         Collected,
         Opened
     }
