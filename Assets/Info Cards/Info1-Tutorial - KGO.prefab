@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1194454295149507061, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7784e7ab59ab376458c07be56b1a8d6f, type: 3}
+      objectReference: {fileID: 8300000, guid: 7f40b043eaf93b342a1b9136b5b9cb2b, type: 3}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7002723536018590789, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_Name
-      value: Info1-Tutorial
+      value: Info1-Tutorial - KGO
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
