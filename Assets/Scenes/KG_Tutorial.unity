@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -647,7 +647,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 728df999b7a667f448e9c37520564ccc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: afc3e39314859f8499185f305e02c5cd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1826,7 +1826,7 @@ PrefabInstance:
     - target: {fileID: 9181985623241623074, guid: da13b5a4d5e8ddd4e8302eea51606c41, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ff1a8d878154ac245af9b92c8e3215a5, type: 3}
+      objectReference: {fileID: 8300000, guid: 1b19dcc0831a7464cb20907759027065, type: 3}
     - target: {fileID: 9181985623241623075, guid: da13b5a4d5e8ddd4e8302eea51606c41, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2519,8 +2519,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0049999985, y: 0.0049999985, z: 0.00050000043}
-  m_Center: {x: 0, y: 4.656613e-10, z: 0}
+  m_Size: {x: 0.0062897354, y: 0.006695352, z: 0.004103458}
+  m_Center: {x: 0, y: 5.5879357e-10, z: 0.0012356639}
 --- !u!1 &289461784
 GameObject:
   m_ObjectHideFlags: 0
@@ -5285,7 +5285,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5708ef15ed95e8842a87f0d5ee84ae8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cb175c5de0894854ba8f467311adc1d5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5474,7 +5474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &580028001
 Transform:
   m_ObjectHideFlags: 0
@@ -6805,7 +6805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &653603071
 Transform:
   m_ObjectHideFlags: 0
@@ -7874,7 +7874,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 15d085d99abb11b43b004134131984eb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac549d04f756a194a88e10ca4f78234b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8003,7 +8003,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d3eaa8005b1a95c4784ee90d2404950c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4d5dc2599ea888542be419675a266cdd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10862,7 +10862,7 @@ MonoBehaviour:
   - {fileID: 1892745978}
   - {fileID: 1000571297}
   - {fileID: 485048420}
-  delayInSeconds: 43
+  delayInSeconds: 28
 --- !u!1 &1070138385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -11028,7 +11028,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2aa6b2806599664409f3a30657a737c2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7efa82e0d6051549aa30b6738f1a1fd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11280,7 +11280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1098703402
 Transform:
   m_ObjectHideFlags: 0
@@ -12057,7 +12057,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: adcd116ccc788184c9d13d446c78a077, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b0ac9382c921d1845910b05c886d79dd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -14581,7 +14581,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b19b777ac4eb841419cf671afa00ff81, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1be7000aeb2959144af6c6563c71178e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14857,7 +14857,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0049999985, y: 0.0049999985, z: 0.00050000043}
+  m_Size: {x: 0.0062897354, y: 0.006695352, z: 0.004103458}
   m_Center: {x: 0, y: 4.656613e-10, z: 0}
 --- !u!23 &1445657843
 MeshRenderer:
@@ -16385,7 +16385,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0049999985, y: 0.0049999985, z: 0.00050000043}
+  m_Size: {x: 0.0062897354, y: 0.006695352, z: 0.004103458}
   m_Center: {x: 0, y: 4.656613e-10, z: 0}
 --- !u!23 &1622508653
 MeshRenderer:
@@ -18430,7 +18430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextParent: {fileID: 767746828}
   button: {fileID: 926907346}
-  delayInSeconds: 0
+  delayInSeconds: 2
 --- !u!114 &1784953204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21230,7 +21230,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 20352c3c91e5f9143a1bb7610ec5d267, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ab22d7c1111aa1049a2dce32222ad0bf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -21330,7 +21330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects:
   - {fileID: 196714699}
-  delayInSeconds: 10
+  delayInSeconds: 3
 --- !u!1 &2097226759
 GameObject:
   m_ObjectHideFlags: 0
