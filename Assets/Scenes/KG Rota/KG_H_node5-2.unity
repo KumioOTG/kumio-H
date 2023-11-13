@@ -688,9 +688,17 @@ PrefabInstance:
       value: "<size=42><b>\u015Eu anda Kitabeler Kulesi'ndesiniz</size></b>\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2113875699234556495, guid: 18470d71939382448be2ecd06efa9662, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2113875699234556495, guid: 18470d71939382448be2ecd06efa9662, type: 3}
       propertyPath: m_textAlignment
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 2113875699234556495, guid: 18470d71939382448be2ecd06efa9662, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2113875699234556495, guid: 18470d71939382448be2ecd06efa9662, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
@@ -1060,6 +1068,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 4
+  speed: 4
+  MakeSourceStationary: 1
+  positionOffset: 0
 --- !u!108 &293600877
 Light:
   m_ObjectHideFlags: 0
@@ -1776,6 +1788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 4
+  speed: 4
+  MakeSourceStationary: 1
+  positionOffset: 0
 --- !u!108 &549083491
 Light:
   m_ObjectHideFlags: 0
@@ -3188,7 +3204,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1000571298}
   - component: {fileID: 1000571301}
-  - component: {fileID: 1000571300}
   - component: {fileID: 1000571299}
   m_Layer: 0
   m_Name: SubText
@@ -3308,14 +3323,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &1000571300
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000571297}
-  m_CullTransparentMesh: 0
 --- !u!23 &1000571301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3761,6 +3768,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 4
+  speed: 4
+  MakeSourceStationary: 1
+  positionOffset: 0
 --- !u!108 &1125279985
 Light:
   m_ObjectHideFlags: 0
@@ -5692,7 +5703,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1643837487}
   - component: {fileID: 1643837490}
-  - component: {fileID: 1643837489}
   - component: {fileID: 1643837488}
   m_Layer: 0
   m_Name: MainText
@@ -5812,14 +5822,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &1643837489
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643837486}
-  m_CullTransparentMesh: 0
 --- !u!23 &1643837490
 MeshRenderer:
   m_ObjectHideFlags: 0
