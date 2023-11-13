@@ -3436,7 +3436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToActivate: []
+  objectToActivate: {fileID: 0}
 --- !u!1 &465066260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14171,7 +14171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 43c19ea3c80deb34db734897e71112ed, type: 2}
+  activeProfile: {fileID: 0}
 --- !u!4 &1645161532
 Transform:
   m_ObjectHideFlags: 0
