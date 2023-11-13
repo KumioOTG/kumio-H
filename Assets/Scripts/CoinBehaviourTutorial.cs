@@ -81,16 +81,17 @@ public class CoinBehaviourTutorial : MonoBehaviour, IMixedRealityPointerHandler
 
     public void Activate()
     {
-        // Logic to activate or show the coin
-        gameObject.SetActive(true); // Activates the GameObject
+        gameObject.SetActive(true);
         Debug.Log("Coin activated: " + gameObject.name);
 
-        // Additional logic for positioning or setup can go here
-
-
+        // Position the coin in front of the player
         transform.position = player.position + player.forward * spawnDistance;
-        transform.rotation = player.rotation;
-        isCollected = false; // Reset the collected state
+
+        // Adjust the rotation to make the coin face the player
+        Vector3 directionToFace = player.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(directionToFace, Vector3.up);
+
+        isCollected = false;
         gameObject.layer = originalLayer;
         GetComponent<Renderer>().enabled = true;
     }

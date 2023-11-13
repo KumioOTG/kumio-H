@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Microsoft.MixedReality.Toolkit.UI;
 
 
@@ -25,13 +22,12 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
     {
         interactable = GetComponent<Interactable>();
         interactable.OnClick.AddListener(ToggleInfoCard);
-        firstAudioSource.loop = false;
-        secondAudioSource.loop = false;
+        if (firstAudioSource != null) firstAudioSource.loop = false;
+        if (secondAudioSource != null) secondAudioSource.loop = false;
     }
 
     private void ToggleInfoCard()
     {
-        // Instantiate or destroy the info card depending on the current state
         if (currentState == ButtonState.Opened)
         {
             CloseInfoCard();
@@ -41,18 +37,24 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
             OpenInfoCard();
         }
 
-        // Play the first audio source on first press, second audio source on second press
         if (isFirstPress)
         {
-            firstAudioSource.Play();
+            PlayAudio(firstAudioSource);
         }
         else
         {
-            secondAudioSource.Play();
+            PlayAudio(secondAudioSource);
         }
 
-        // Toggle the isFirstPress flag
         isFirstPress = !isFirstPress;
+    }
+
+    private void PlayAudio(AudioSource audioSource)
+    {
+        if (audioSource != null && audioSource.isActiveAndEnabled)
+        {
+            audioSource.Play();
+        }
     }
 
     private void OpenInfoCard()
@@ -81,7 +83,10 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
             Vector3 userPosition = Camera.main.transform.position;
             Vector3 userForward = Camera.main.transform.forward;
             Vector3 spawnPosition = userPosition + userForward * distanceFromUser;
-            Quaternion rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+
+            // Adjust the rotation to face the camera
+            Quaternion rotation = Quaternion.LookRotation(-userForward, Vector3.up); // This line is changed
+
             instantiatedInfoCard = Instantiate(infoCardPrefab, spawnPosition, rotation);
         }
     }
