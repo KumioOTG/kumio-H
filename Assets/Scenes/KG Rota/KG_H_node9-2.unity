@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignmentType: 0
-  containerObject: {fileID: 0}
+  containerObject: {fileID: 317839835}
 --- !u!4 &317839835
 Transform:
   m_ObjectHideFlags: 0
@@ -2659,7 +2659,6 @@ GameObject:
   - component: {fileID: 1016907628}
   - component: {fileID: 1016907627}
   - component: {fileID: 1016907626}
-  - component: {fileID: 1016907631}
   - component: {fileID: 1016907632}
   m_Layer: 0
   m_Name: Main Camera
@@ -2791,18 +2790,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1016907631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016907624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21fbcce7f2998094096aa901947ae732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1016907632
 MonoBehaviour:
   m_ObjectHideFlags: 0
