@@ -1178,7 +1178,7 @@ Transform:
   - {fileID: 143848642}
   - {fileID: 2860409260609398258}
   - {fileID: 451804451}
-  - {fileID: 941925018}
+  - {fileID: 2064761370}
   - {fileID: 1432792409}
   - {fileID: 1828097025}
   - {fileID: 1746076}
@@ -2480,13 +2480,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941925017}
   m_LocalRotation: {x: -0, y: 0.7177138, z: -0, w: 0.69633824}
-  m_LocalPosition: {x: -22.7, y: 6.5, z: 28.6}
-  m_LocalScale: {x: 4.403399, y: 4.4034, z: 4.403399}
+  m_LocalPosition: {x: -4.0441895, y: -3.1958923, z: 5.3445206}
+  m_LocalScale: {x: 4.4033985, y: 4.4034, z: 4.4033985}
   m_Children:
   - {fileID: 543450653505063812}
   - {fileID: 1804797788}
-  m_Father: {fileID: 317839835}
-  m_RootOrder: 3
+  m_Father: {fileID: 2064761370}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 91.732, z: 0}
 --- !u!114 &941925019
 MonoBehaviour:
@@ -6003,7 +6003,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -6623,6 +6623,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &2064761369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064761370}
+  m_Layer: 0
+  m_Name: kartal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2064761370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064761369}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.655811, y: 9.695892, z: 23.25548}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children:
+  - {fileID: 941925018}
+  m_Father: {fileID: 317839835}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125267042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}

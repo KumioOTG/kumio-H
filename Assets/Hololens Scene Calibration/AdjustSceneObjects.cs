@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AdjustSceneObjects : MonoBehaviour
 {
@@ -6,19 +7,27 @@ public class AdjustSceneObjects : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(DelayedAdjustment());
+    }
+
+    IEnumerator DelayedAdjustment()
+    {
+        // Wait for a short delay
+        yield return new WaitForSeconds(0.5f); // Adjust the delay time as needed
+
+        // Now adjust the objects
         AdjustObjectsToCamera();
     }
 
     private void AdjustObjectsToCamera()
     {
         Vector3 cameraPositionDelta = Camera.main.transform.position;
-        float cameraYRotation = Camera.main.transform.eulerAngles.y;
+        Quaternion cameraRotationDelta = Camera.main.transform.rotation;
 
         foreach (Transform obj in objectsToAdjust)
         {
             obj.position += cameraPositionDelta;
-            Vector3 currentRotation = obj.eulerAngles;
-            obj.rotation = Quaternion.Euler(currentRotation.x, cameraYRotation, currentRotation.z);
+            obj.rotation = Quaternion.Euler(obj.eulerAngles.x, cameraRotationDelta.eulerAngles.y, obj.eulerAngles.z);
         }
     }
 }
