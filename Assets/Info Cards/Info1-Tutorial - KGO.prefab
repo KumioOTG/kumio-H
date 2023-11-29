@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5110844696819777873, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -59,7 +59,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Info1-Tutorial - KGO
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 257566323098285452, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+    - {fileID: 4279282655527057373, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+    - {fileID: 1657761657195525024, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+    - {fileID: 96005400803765205, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+    - {fileID: 2465844094447033242, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
 --- !u!1 &2607995113057115055 stripped
 GameObject:

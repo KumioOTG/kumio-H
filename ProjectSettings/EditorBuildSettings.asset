@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node0.unity
     guid: 7d5547d1d08bbc044b656cca162d33aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node1.unity
     guid: e99bb54bdd8ccf94fbc7b5981270a300
   - enabled: 0
@@ -35,10 +35,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node8.unity
     guid: dcf43f0ba10bc3b45814ebe20c3f2ac6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota/KG_H_node8-1.unity
     guid: 06f2e6aca83249b4297dc45b40cdc6f1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota/KG_H_node8-2.unity
     guid: c2915defcf5005f4bba21390eb894879
   - enabled: 0
