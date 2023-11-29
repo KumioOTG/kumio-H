@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstAudioSource: {fileID: 0}
   secondAudioSource: {fileID: 0}
-  infoCardPrefab: {fileID: 2607995113057115055, guid: 987eefa00c2dee04f93e1032b7525462, type: 3}
+  infoCardPrefab: {fileID: 7002723536018590789, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
   icon: {fileID: 1635070052}
   collectedIcon: {fileID: 21300000, guid: 4e5856a2bb3d1e14b82208653244edbb, type: 3}
   openedIcon: {fileID: 21300000, guid: 56ac88c48626dcc4481777926d8cbeca, type: 3}
@@ -5496,7 +5496,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 34f9cbd28a9740349b6cc2f5e280dda3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6b74bfcedb522ec45b181a534bd2c0bd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

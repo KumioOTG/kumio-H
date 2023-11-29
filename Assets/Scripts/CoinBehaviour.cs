@@ -12,9 +12,8 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
 
     [SerializeField] private Manager gameManager;
     [SerializeField] private Transform player;
-    [SerializeField] private NarratorManager narrator;
-    [SerializeField] private AudioClip narration;
-    [SerializeField] private List<AudioClip> followingNarrations;
+  
+   
     [SerializeField] private GameObject soundPrefab; 
 
     [SerializeField] private float clicked = 0;
@@ -34,7 +33,7 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
     {
         gameManager = FindAnyObjectByType<Manager>();
         player = GameObject.FindGameObjectWithTag("MainCamera").transform;
-        narrator = FindObjectOfType<NarratorManager>();
+       
         originalLayer = gameObject.layer;
     }
 
@@ -129,10 +128,7 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
             Vector3 colliderDirection = other.transform.forward;
             float dotProduct = Vector3.Dot(colliderDirection, transform.forward);
 
-            if (dotProduct < 0)
-            {     
-                narrator.ChangeNarration(narration, followingNarrations);
-            }
+            
         }
     }
 
