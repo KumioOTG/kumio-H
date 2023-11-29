@@ -7,29 +7,34 @@ public class CoinButtonBehaviour : MonoBehaviour
     [SerializeField] private Manager gameManager;
     [SerializeField] private CoinType coinType;
     [SerializeField] private SpriteRenderer icon;
-    [SerializeField] private List<Sprite> icons;
+    [SerializeField] private Sprite collectedIcon;
+    [SerializeField] private Sprite notCollectedIcon;
 
-    void Start()
+    private void Start()
     {
-        gameManager = FindAnyObjectByType<Manager>();
+        if (gameManager == null)
+        {
+            gameManager = FindObjectOfType<Manager>();
+        }
+
+        UpdateButtonState();
     }
 
-    void Update()
+    private void Update()
     {
-        if (gameManager.coins[(int)coinType] != null)
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = true;
-            icon.sprite = icons[0];
-        }
-        else
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-            icon.sprite = icons[1];
-        }
+        UpdateButtonState();
     }
 
-    public void ReleaseCoin()
+    private void UpdateButtonState()
     {
-        gameManager.ReleaseCoin(coinType);
+        bool isCollected = gameManager.IsCoinCollected(coinType);
+
+        icon.sprite = isCollected ? collectedIcon : notCollectedIcon;
+        GetComponent<BoxCollider>().enabled = isCollected;
+    }
+
+    public void OnButtonClick()
+    {
+        gameManager.TryReactivateCoin(coinType);
     }
 }

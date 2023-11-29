@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {
-    [SerializeField] private NarratorManager narrator;
+    
     [SerializeField] private GameObject scene;
-    [SerializeField] private AudioClip narration;
-    [SerializeField] private List<AudioClip> followingNarrations;
+    
 
     void Start()
     {
-        narrator = FindObjectOfType<NarratorManager>();
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,10 +20,7 @@ public class PlayerDetection : MonoBehaviour
         {
             scene.SetActive(true);
 
-            if (narration != null)
-            {
-                SetNarration();
-            }
+            
         }
     }
 
@@ -36,15 +32,5 @@ public class PlayerDetection : MonoBehaviour
         }
     }
 
-    private void SetNarration()
-    {
-        if (!narrator.isBusy)
-        {
-            narrator.ChangeNarration(narration, followingNarrations);
-        }
-        else
-        {
-            FunctionTimer.Create(SetNarration, narrator.waitTime + 0.2f, "SceneNarrationWait");
-        }
-    }
+    
 }

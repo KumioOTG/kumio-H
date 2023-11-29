@@ -14,9 +14,7 @@ public class CoinBehaviourTutorial : MonoBehaviour, IMixedRealityPointerHandler
 
     [SerializeField] private ManagerTutorial gameManager;
     [SerializeField] private Transform player;
-    [SerializeField] private NarratorManager narrator;
-    [SerializeField] private AudioClip narration;
-    [SerializeField] private List<AudioClip> followingNarrations;
+    
     [SerializeField] private GameObject soundPrefab;
     [SerializeField] private GameObject soundPrefab2;
     [SerializeField] private float spawnDistance = 1f;
@@ -32,7 +30,7 @@ public class CoinBehaviourTutorial : MonoBehaviour, IMixedRealityPointerHandler
     {
         gameManager = FindAnyObjectByType<ManagerTutorial>();
         player = GameObject.FindGameObjectWithTag("MainCamera").transform;
-        narrator = FindObjectOfType<NarratorManager>();
+        
         originalLayer = gameObject.layer;
     }
 
