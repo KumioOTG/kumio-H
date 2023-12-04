@@ -108,7 +108,7 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
     private void Collect()
     {
         ResetClicks();
-        gameManager.coins[(int)type] = this;
+        gameManager.CoinCollected(this);
         gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         GetComponent<Renderer>().enabled = false;
     }
