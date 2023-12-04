@@ -35,10 +35,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node8.unity
     guid: dcf43f0ba10bc3b45814ebe20c3f2ac6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node8-1.unity
     guid: 06f2e6aca83249b4297dc45b40cdc6f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KG Rota/KG_H_node8-2.unity
     guid: c2915defcf5005f4bba21390eb894879
   - enabled: 0
@@ -59,6 +59,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KGO_Tutorial.unity
     guid: 55e11462020496b4c8425ff1384dbe29
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node1.unity
+    guid: 7575d47e79630fd419bd57a11f5a00b6
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 69347078ef49d494d9034a4fde97d43b, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}
