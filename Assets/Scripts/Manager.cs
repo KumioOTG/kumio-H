@@ -1,9 +1,13 @@
-using UnityEngine;
-using Microsoft.MixedReality.Toolkit.UI; // For MRTK Interactable
-using Microsoft.MixedReality.Toolkit.Input; // For MRTK input handling
-using System.Linq;
+using CodeMonkey.Utils;
+using Microsoft.MixedReality.Toolkit.Utilities;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine;
+using System.Linq;
+using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 
 public enum CoinType
@@ -40,7 +44,8 @@ public class InfoCard
 
 public class Manager : MonoBehaviour
 {
-    public List<CoinBehaviour> coins;
+    public static Manager Instance { get; private set; }
+
     public List<AudioClip> listenedNarrations;
     public List<CollectibleObjectBehaviour> collectedObjects;
     public List<InfoCard> infoCards;
@@ -49,15 +54,12 @@ public class Manager : MonoBehaviour
     private List<InfoCardData> collectedInfoCardsSerialized = new List<InfoCardData>();
     private List<InfoCard> collectedInfoCards;
 
-    [SerializeField]
-    private List<Interactable> coinButtons; // MRTK Interactable buttons
-
-    [SerializeField]
-    private Sprite[] defaultSprites;
-    [SerializeField]
-    private Sprite[] collectedSprites;
-
     private AudioClip narrationToAddToListened;
+
+    private Dictionary<CoinType, bool> coinCollectedStatus = new Dictionary<CoinType, bool>();
+    public List<CoinBehaviour> coins; // Assuming this is already defined
+
+    public List<CoinButtonBehaviour> coinButtonBehaviours;
 
     private void Awake()
     {
@@ -86,44 +88,12 @@ public class Manager : MonoBehaviour
         }
     }
 
-    public void CoinCollected(CoinBehaviour coin)
+    public bool IsCoinCollected(CoinType type)
     {
-        int coinIndex = (int)coin.type;
-        if (coins[coinIndex] != null)
-        {
-            coins[coinIndex] = null;
-            UpdateButtonIcon(coinIndex, false); // Update to collected state
-        }
+        return coinCollectedStatus.ContainsKey(type) && coinCollectedStatus[type];
     }
 
-    public void ReleaseCoin(CoinType coin)
-    {
-        int coinIndex = (int)coin;
-        if (coins[coinIndex] != null)
-        {
-            coins[coinIndex].Activate();
-            coins[coinIndex] = null;
-            UpdateButtonIcon(coinIndex, true); // Update to default state
-        }
-    }
-
-    private void UpdateButtonIcon(int coinIndex, bool isDefault)
-    {
-        if (coinIndex < 0 || coinIndex >= coinButtons.Count) return;
-
-        // Change the button's sprite
-        Interactable button = coinButtons[coinIndex];
-        Image buttonImage = button.transform.Find("UIButtonSpriteIcon").GetComponent<Image>(); // Replace "YourChildObjectName" with the actual name of the child object
-        if (buttonImage != null)
-        {
-            buttonImage.sprite = isDefault ? defaultSprites[coinIndex] : collectedSprites[coinIndex];
-        }
-        else
-        {
-            // Handle cases where the Image component is not found
-            Debug.LogError("Image component not found on the button's child");
-        }
-    }
+    
 
     public void CheckAndAddToListenedNarrations(AudioClip narration)
     {
@@ -140,6 +110,28 @@ public class Manager : MonoBehaviour
         narrationToAddToListened = null;
     }
 
+    public void ReleaseCoin(CoinType coin)
+    {
+        if (coins[(int)coin] != null)
+        {
+            coins[(int)coin].Activate();
+            coins[(int)coin] = null;
+            // Update the coin's collection status
+            coinCollectedStatus[coin] = false;
+        }
+    }
+
+    public void TryReactivateCoin(CoinType coin)
+    {
+        foreach (var coinButtonBehaviour in coinButtonBehaviours)
+        {
+            if (coinButtonBehaviour.coinType == coin)
+            {
+                coinButtonBehaviour.ActivateCoin();
+                break;
+            }
+        }
+    }
 
     public InfoCard GetInfoCardByAudio(AudioClip audio)
     {

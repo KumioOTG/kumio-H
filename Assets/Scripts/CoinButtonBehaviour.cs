@@ -5,10 +5,13 @@ using UnityEngine;
 public class CoinButtonBehaviour : MonoBehaviour
 {
     [SerializeField] private Manager gameManager;
-    [SerializeField] private CoinType coinType;
+    
     [SerializeField] private SpriteRenderer icon;
     [SerializeField] private Sprite collectedIcon;
     [SerializeField] private Sprite notCollectedIcon;
+
+    public CoinType coinType;
+    public CoinBehaviour associatedCoin;
 
     private void Start()
     {
@@ -33,8 +36,16 @@ public class CoinButtonBehaviour : MonoBehaviour
         GetComponent<BoxCollider>().enabled = isCollected;
     }
 
-    public void OnButtonClick()
+    public void OnButtonPressed()
     {
-        gameManager.TryReactivateCoin(coinType);
+        Manager.Instance.TryReactivateCoin(coinType);
     }
+
+    public void ActivateCoin()
+    {
+        // Logic to activate the coin, for example:
+        associatedCoin.gameObject.SetActive(true);
+        // Plus, any additional logic needed to "reset" or "activate" the coin
+    }
+
 }

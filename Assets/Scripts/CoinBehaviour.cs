@@ -1,51 +1,53 @@
-using CodeMonkey.Utils;
-using Microsoft.MixedReality.Toolkit.Input;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Microsoft.MixedReality.Toolkit.Input;
+using System.Diagnostics;
+using System.Collections;
 
+[DebuggerDisplay("Collectable Object: {gameObject.name}")]
 public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
 {
+    [SerializeField]
+    private GameObject objectToCollect;
 
+    [SerializeField]
+    private GameObject soundPrefab; // Set this prefab in the inspector
 
-    public CoinType type;
-
-    [SerializeField] private Manager gameManager;
     [SerializeField] private Transform player;
-  
-   
-    [SerializeField] private GameObject soundPrefab; 
 
-    [SerializeField] private float clicked = 0;
-    [SerializeField] private float clickdelay = 0.5f;
-    [SerializeField] private float clicktime = 0;
     [SerializeField] private float spawnDistance = 1;
-
-    private bool isCollected = false;
-    private bool isTouched = false;
-    private static int numCollected = 0;
-
-    private int airTapCount = 0;
-    private float tapTimeLimit = 0.5f;
     private int originalLayer;
 
-    void Start()
+
+    private bool isCollected = false;
+    private static int numCollected = 0;
+    private int airTapCount = 0;
+    private float tapTimeLimit = 0.5f;
+
+    private void Start()
     {
-        gameManager = FindAnyObjectByType<Manager>();
-        player = GameObject.FindGameObjectWithTag("MainCamera").transform;
-       
-        originalLayer = gameObject.layer;
+        numCollected = 0;
+        
+
+
+        // Register for parent notification
+        ParentObjectController parentController = GetComponentInParent<ParentObjectController>();
+        if (parentController != null)
+        {
+            OnCollect += parentController.CollectableObjectCollected;
+        }
     }
 
-    void Update()
-    {
-
-    }
+    public event System.Action OnCollect;
 
     public void OnPointerDown(MixedRealityPointerEventData eventData)
     {
         if (!isCollected)
         {
+            if (eventData.Pointer == null || eventData.Pointer.Result.CurrentPointerTarget != objectToCollect)
+            {
+                return;
+            }
+
             airTapCount++;
 
             if (airTapCount == 1)
@@ -54,22 +56,29 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
             }
             else if (airTapCount == 2)
             {
-                UnityEngine.Debug.Log("Collecting " + gameObject.name);
+
+
+                // Add collect action here
+                UnityEngine.Debug.Log("Collecting " + objectToCollect.name);
                 isCollected = true;
                 numCollected++;
                 UnityEngine.Debug.Log(numCollected + " objects collected");
 
+                // Notify parent about collection
+                OnCollect?.Invoke();
+
                 // Play collect sound
                 if (soundPrefab != null)
                 {
-                    GameObject soundInstance = Instantiate(soundPrefab, transform.position, Quaternion.identity);
+                    GameObject soundInstance = Instantiate(soundPrefab, objectToCollect.transform.position, Quaternion.identity);
                     AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
                     audioSource.Play();
                     Destroy(soundInstance, audioSource.clip.length);
                 }
 
-                // Collect
-                Collect();
+                // Destroy the game object
+                Destroy(objectToCollect);
+                UnityEngine.Debug.Log("Destroyed " + objectToCollect.name);
             }
         }
     }
@@ -80,20 +89,10 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
         airTapCount = 0;
     }
 
-    public void OnPointerClicked(MixedRealityPointerEventData eventData)
-    {
-        // No action needed.
-    }
-
-    public void OnPointerUp(MixedRealityPointerEventData eventData)
-    {
-        // No action needed.
-    }
-
-    public void OnPointerDragged(MixedRealityPointerEventData eventData)
-    {
-        // No action needed.
-    }
+    // Implement other interface methods as needed
+    public void OnPointerClicked(MixedRealityPointerEventData eventData) { }
+    public void OnPointerUp(MixedRealityPointerEventData eventData) { }
+    public void OnPointerDragged(MixedRealityPointerEventData eventData) { }
 
     public void Activate()
     {
@@ -104,42 +103,14 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
         GetComponent<Renderer>().enabled = true;
     }
 
-
-    private void Collect()
-    {
-        ResetClicks();
-        gameManager.CoinCollected(this);
-        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-        GetComponent<Renderer>().enabled = false;
-    }
-
-    private void ResetClicks()
-    {
-        clicked = 0;
-        clicktime = 0;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "PlayerHand" && !isTouched)
-        {
-            isTouched = true;
-            FunctionTimer.Create(ResetTouchStatus, 1f, "ResetTouchStatus");
-            Vector3 colliderDirection = other.transform.forward;
-            float dotProduct = Vector3.Dot(colliderDirection, transform.forward);
-
-            
-        }
-    }
-
-    private void ResetTouchStatus()
-    {
-        isTouched = false;
-    }
-
     public static int GetNumCollected()
     {
         return numCollected;
     }
-}
 
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
+    }
+
+}
