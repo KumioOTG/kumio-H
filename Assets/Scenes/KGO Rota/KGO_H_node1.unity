@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 30603824}
   - component: {fileID: 30603823}
   - component: {fileID: 30603820}
-  - component: {fileID: 30603831}
+  - component: {fileID: 30603819}
   m_Layer: 8
   m_Name: Sikke_Saecla
   m_TagString: Collectible
@@ -458,6 +458,21 @@ Transform:
   m_Father: {fileID: 665635929}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &30603819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30603817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 30603817}
+  soundPrefab: {fileID: 1593853365}
+  type: 1
 --- !u!82 &30603820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -722,18 +737,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30603817}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &30603831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30603817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &40540130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,6 +941,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1944713263, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_PrefabInstance: {fileID: 1735317718}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &51962371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51962373}
+  - component: {fileID: 51962372}
+  m_Layer: 0
+  m_Name: SwitchSceneOnCollect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &51962372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51962371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 1544566258}
+  coinBehaviour: {fileID: 401079363}
+--- !u!4 &51962373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51962371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.104200006, z: 0.011519589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52438661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &110288910
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1828,7 +1876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &175387718
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1916,11 +1964,9 @@ GameObject:
   - component: {fileID: 193507818}
   - component: {fileID: 193507817}
   - component: {fileID: 193507816}
-  - component: {fileID: 193507815}
-  - component: {fileID: 193507814}
   - component: {fileID: 193507813}
   - component: {fileID: 193507812}
-  - component: {fileID: 193507824}
+  - component: {fileID: 193507814}
   m_Layer: 13
   m_Name: Sikke_Constrvit
   m_TagString: Collectible
@@ -2096,23 +2142,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193507810}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3c16ff63673d488b096824f0ed149, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &193507815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193507810}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbf14e2020200b4db74bcc5ae6cdbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 193507810}
+  soundPrefab: {fileID: 1593853365}
+  type: 5
 --- !u!114 &193507816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2281,18 +2318,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193507810}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &193507824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193507810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &198576250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3066,7 +3091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &240687633
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3154,11 +3179,9 @@ GameObject:
   - component: {fileID: 257094382}
   - component: {fileID: 257094381}
   - component: {fileID: 257094380}
-  - component: {fileID: 257094379}
-  - component: {fileID: 257094378}
   - component: {fileID: 257094377}
   - component: {fileID: 257094376}
-  - component: {fileID: 257094388}
+  - component: {fileID: 257094378}
   m_Layer: 10
   m_Name: Sikke_Qui
   m_TagString: Collectible
@@ -3334,23 +3357,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257094374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3c16ff63673d488b096824f0ed149, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &257094379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257094374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbf14e2020200b4db74bcc5ae6cdbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 257094374}
+  soundPrefab: {fileID: 1593853365}
+  type: 3
 --- !u!114 &257094380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3519,18 +3533,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257094374}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &257094388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257094374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &268380289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4997,7 +4999,6 @@ GameObject:
   - component: {fileID: 401079366}
   - component: {fileID: 401079365}
   - component: {fileID: 401079362}
-  - component: {fileID: 401079361}
   - component: {fileID: 401079363}
   m_Layer: 7
   m_Name: Sikke_Avrea
@@ -5005,7 +5006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &401079360
 Transform:
   m_ObjectHideFlags: 0
@@ -5020,20 +5021,6 @@ Transform:
   m_Father: {fileID: 110288910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &401079361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401079359}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f113fc0fcc964bb5efe531f8c90bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToCollect: {fileID: 401079359}
-  soundPrefab: {fileID: 1593853365}
 --- !u!82 &401079362
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5142,14 +5129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  gameManager: {fileID: 1384613795}
-  player: {fileID: 1016907625}
+  objectToCollect: {fileID: 401079359}
   soundPrefab: {fileID: 1593853365}
-  clicked: 0
-  clickdelay: 0.5
-  clicktime: 0
-  spawnDistance: 1
+  type: 0
 --- !u!114 &401079365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5501,7 +5483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451804449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
   m_Name: 
@@ -5717,6 +5699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 3
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: GERIT
+      objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
       value: 0.026562177
@@ -5930,16 +5916,48 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1318824629}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1103169245}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnCoinButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7652376644636595447, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: iconQuadTexture
@@ -5953,6 +5971,17 @@ PrefabInstance:
     - {fileID: 1911902821, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
     - {fileID: 1911902820, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+--- !u!114 &464374221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 464374220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318824613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &465484752 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6956195943313842603, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
@@ -6460,6 +6489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 5
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: PORTAM
+      objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
       value: 0.026376138
@@ -6692,6 +6725,17 @@ PrefabInstance:
     - {fileID: 1911902821, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
     - {fileID: 1911902820, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+--- !u!114 &498367230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 498367229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496124294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508643766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -8324,6 +8368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 2
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: SAECLA
+      objectReference: {fileID: 0}
     - target: {fileID: 316800719, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -8553,16 +8601,48 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1690204291}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1103169245}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnCoinButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7652376644636595447, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: iconQuadTexture
@@ -8576,6 +8656,17 @@ PrefabInstance:
     - {fileID: 1911902821, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
     - {fileID: 1911902820, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+--- !u!114 &632941140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 632941139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690204275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648992832
 GameObject:
   m_ObjectHideFlags: 0
@@ -8820,7 +8911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &665635929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9304,6 +9395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 4
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: QUI
+      objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
       value: 0.026483323
@@ -9540,6 +9635,17 @@ PrefabInstance:
     - {fileID: 1911902821, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
     - {fileID: 1911902820, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+--- !u!114 &715127410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 715127409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999402639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &716447409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9550,6 +9656,10 @@ PrefabInstance:
     - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Name
       value: Sikke 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: AURO
       objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
@@ -9849,6 +9959,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &716447414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 716447409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716447412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &716447423
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10556,7 +10677,7 @@ GameObject:
   - component: {fileID: 786089184}
   - component: {fileID: 786089183}
   - component: {fileID: 786089180}
-  - component: {fileID: 786089191}
+  - component: {fileID: 786089179}
   m_Layer: 9
   m_Name: Sikke_Gerit
   m_TagString: Collectible
@@ -10578,6 +10699,21 @@ Transform:
   m_Father: {fileID: 2030558311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &786089179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786089177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 786089177}
+  soundPrefab: {fileID: 1593853365}
+  type: 2
 --- !u!82 &786089180
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10842,18 +10978,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786089177}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &786089191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786089177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &816187004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -11687,7 +11811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &891581064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13189,6 +13313,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1103169244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103169246}
+  - component: {fileID: 1103169245}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1103169245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103169244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7462b00231d043749b2073fc3c7de4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinButtons:
+  - type: 0
+    interactable: {fileID: 1956344042}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 401079363}
+  - type: 1
+    interactable: {fileID: 632941140}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 30603819}
+  - type: 2
+    interactable: {fileID: 464374221}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 786089179}
+  - type: 3
+    interactable: {fileID: 715127410}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 257094378}
+  - type: 4
+    interactable: {fileID: 498367230}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 1247378029}
+  - type: 5
+    interactable: {fileID: 1487636425}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 193507814}
+  - type: 6
+    interactable: {fileID: 716447414}
+    defaultSprite: {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
+    collectedSprite: {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
+    coinBehaviour: {fileID: 1212356965}
+--- !u!4 &1103169246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103169244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.10000001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1117063480
 GameObject:
   m_ObjectHideFlags: 0
@@ -13396,11 +13599,9 @@ GameObject:
   - component: {fileID: 1212356969}
   - component: {fileID: 1212356968}
   - component: {fileID: 1212356967}
-  - component: {fileID: 1212356966}
-  - component: {fileID: 1212356965}
   - component: {fileID: 1212356964}
   - component: {fileID: 1212356963}
-  - component: {fileID: 1212356975}
+  - component: {fileID: 1212356965}
   m_Layer: 12
   m_Name: Sikke_Auro
   m_TagString: Collectible
@@ -13576,23 +13777,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212356961}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3c16ff63673d488b096824f0ed149, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1212356966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212356961}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbf14e2020200b4db74bcc5ae6cdbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 1212356961}
+  soundPrefab: {fileID: 1593853365}
+  type: 6
 --- !u!114 &1212356967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13761,18 +13953,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212356961}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &1212356975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212356961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1221288557
 GameObject:
   m_ObjectHideFlags: 0
@@ -14071,11 +14251,9 @@ GameObject:
   - component: {fileID: 1247378033}
   - component: {fileID: 1247378032}
   - component: {fileID: 1247378031}
-  - component: {fileID: 1247378030}
-  - component: {fileID: 1247378029}
   - component: {fileID: 1247378028}
   - component: {fileID: 1247378027}
-  - component: {fileID: 1247378039}
+  - component: {fileID: 1247378029}
   m_Layer: 11
   m_Name: Sikke_Portam
   m_TagString: Collectible
@@ -14251,23 +14429,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247378025}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3c16ff63673d488b096824f0ed149, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd0fc484a04c4749afb3f4328b1981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1247378030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247378025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbf14e2020200b4db74bcc5ae6cdbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  objectToCollect: {fileID: 1247378025}
+  soundPrefab: {fileID: 1593853365}
+  type: 4
 --- !u!114 &1247378031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14436,18 +14605,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247378025}
   m_Mesh: {fileID: 2534964839176971238, guid: a98682c576f0e0b49b3d0419ba51b76e, type: 3}
---- !u!114 &1247378039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247378025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580b14a287c3fac48b9651bd802bbfc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1280313596
 GameObject:
   m_ObjectHideFlags: 0
@@ -15378,14 +15535,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384613794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1b12d03e1d68b418cc0614fa4e3798, type: 3}
+  m_Script: {fileID: 11500000, guid: a983fd4582cb4024585453853786e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins:
-  - {fileID: 401079363}
-  listenedNarrations: []
-  collectedObjects: []
-  collectedInfoCardsSerialized: []
 --- !u!4 &1384613796
 Transform:
   m_ObjectHideFlags: 0
@@ -15398,7 +15550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398364648
 GameObject:
@@ -15804,6 +15956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 6
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: CONSTRVIT
+      objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
       value: 0.028144969
@@ -16102,6 +16258,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1487636425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 1487636420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487636423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1487636434
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17378,24 +17545,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_PrefabInstance: {fileID: 1956344041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1632696239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632696238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edfb8f616c911804baac815755668239, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 1384613795}
-  coinType: 0
-  icon: {fileID: 779144906}
-  icons:
-  - {fileID: 21300000, guid: b6f89c4ca5fa52f4aa1b53b82602ea5b, type: 3}
-  - {fileID: 21300000, guid: cbfa95a357177944bbb3a1061a7bc515, type: 3}
 --- !u!114 &1632696254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18692,7 +18841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948297675910076, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948297681691081, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalScale.y
@@ -18924,7 +19073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298769142207, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298898572832, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19416,7 +19565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1843746701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19883,7 +20032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12abc0142945ae746be2012a97b1c942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: KG_H_node2
+  sceneToLoad: KGO_H_node2
   buttonToActivate: {fileID: 1892745983}
   delayInSeconds: 0
 --- !u!114 &1892745981
@@ -20349,7 +20498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919640436
 GameObject:
@@ -20653,6 +20802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sikke 1
       objectReference: {fileID: 0}
+    - target: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+      propertyPath: m_TagString
+      value: AVREA
+      objectReference: {fileID: 0}
     - target: {fileID: 316800722, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: m_Size.x
       value: 0.02698864
@@ -20887,23 +21040,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1632696254}
+      objectReference: {fileID: 1103169245}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonClick
+      value: OnCoinButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToggleButtonTutorial, Assembly-CSharp
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -20921,6 +21074,17 @@ PrefabInstance:
     - {fileID: 1911902821, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
     - {fileID: 1911902820, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+--- !u!114 &1956344042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7440800412470431853, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
+  m_PrefabInstance: {fileID: 1956344041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632696238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1993713455
 GameObject:
   m_ObjectHideFlags: 0
@@ -21272,7 +21436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2030558311
 RectTransform:
   m_ObjectHideFlags: 0

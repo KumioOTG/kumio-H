@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.UI;
 
@@ -29,6 +30,31 @@ public class UIManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        foreach (var coinButton in coinButtons)
+        {
+            // Assume each Interactable is tagged with a unique tag that matches its CoinType
+            GameObject interactableObject = GameObject.FindGameObjectWithTag(coinButton.type.ToString());
+            if (interactableObject != null)
+            {
+                coinButton.interactable = interactableObject.GetComponent<Interactable>();
+            }
+            else
+            {
+                Debug.LogError("Interactable object not found for type: " + coinButton.type);
+            }
+        }
     }
 
     public void UpdateButtonSprite(CoinType type, bool collected)

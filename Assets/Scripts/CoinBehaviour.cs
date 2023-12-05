@@ -65,6 +65,8 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
         isCollected = true;
         objectToCollect.SetActive(false); // Deactivate the coin
 
+        OnCollect?.Invoke(); // Invoke the OnCollect event
+
         GameManager.Instance.CollectCoin(type); // Notify GameManager about the collection
         UIManager.Instance.UpdateButtonSprite(type, true); // true for collected
 

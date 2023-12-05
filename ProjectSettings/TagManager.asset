@@ -12,6 +12,20 @@ TagManager:
   - Collectible
   - Coin
   - IndexTip
+  - avrea
+  - saecla
+  - gerit
+  - qui
+  - portam
+  - constrvit
+  - auro
+  - AVREA
+  - SAECLA
+  - GERIT
+  - QUI
+  - PORTAM
+  - CONSTRVIT
+  - AURO
   layers:
   - Default
   - TransparentFX
@@ -19,7 +33,7 @@ TagManager:
   - detectable
   - Water
   - UI
-  - 
+  - Coin Type
   - 
   - 
   - 
