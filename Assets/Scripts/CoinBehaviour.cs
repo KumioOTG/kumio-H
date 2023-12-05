@@ -8,40 +8,18 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
 {
     [SerializeField]
     private GameObject objectToCollect;
-
-    [SerializeField]
-    private GameObject soundPrefab; // Set this prefab in the inspector
-
-    [SerializeField] private Transform player;
-
-    [SerializeField] private float spawnDistance = 1;
-    private int originalLayer;
-
+    [SerializeField] private GameObject soundPrefab; // Sound prefab for collection sound effect
+    [SerializeField] private CoinType type; // Define the type of the coin
 
     private bool isCollected = false;
-    private static int numCollected = 0;
     private int airTapCount = 0;
     private float tapTimeLimit = 0.5f;
-
-    private void Start()
-    {
-        numCollected = 0;
-        
-
-
-        // Register for parent notification
-        ParentObjectController parentController = GetComponentInParent<ParentObjectController>();
-        if (parentController != null)
-        {
-            OnCollect += parentController.CollectableObjectCollected;
-        }
-    }
 
     public event System.Action OnCollect;
 
     public void OnPointerDown(MixedRealityPointerEventData eventData)
     {
-        if (!isCollected)
+        if (!isCollected && eventData.Pointer != null && eventData.Pointer.Result.CurrentPointerTarget == gameObject)
         {
             if (eventData.Pointer == null || eventData.Pointer.Result.CurrentPointerTarget != objectToCollect)
             {
@@ -56,18 +34,15 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
             }
             else if (airTapCount == 2)
             {
-
-
-                // Add collect action here
                 UnityEngine.Debug.Log("Collecting " + objectToCollect.name);
                 isCollected = true;
-                numCollected++;
-                UnityEngine.Debug.Log(numCollected + " objects collected");
+                UnityEngine.Debug.Log(isCollected);
+                objectToCollect.SetActive(false); // Deactivate the coin
 
-                // Notify parent about collection
-                OnCollect?.Invoke();
+                GameManager.Instance.CollectCoin(type);// Notify GameManager about the collection
+                UIManager.Instance.UpdateButtonSprite(type, true); // true for collected
 
-                // Play collect sound
+                // Play collect sound and other collection logic
                 if (soundPrefab != null)
                 {
                     GameObject soundInstance = Instantiate(soundPrefab, objectToCollect.transform.position, Quaternion.identity);
@@ -75,10 +50,6 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
                     audioSource.Play();
                     Destroy(soundInstance, audioSource.clip.length);
                 }
-
-                // Destroy the game object
-                Destroy(objectToCollect);
-                UnityEngine.Debug.Log("Destroyed " + objectToCollect.name);
             }
         }
     }
@@ -89,28 +60,10 @@ public class CoinBehaviour : MonoBehaviour, IMixedRealityPointerHandler
         airTapCount = 0;
     }
 
-    // Implement other interface methods as needed
+   
+
+    // Other interface methods
     public void OnPointerClicked(MixedRealityPointerEventData eventData) { }
     public void OnPointerUp(MixedRealityPointerEventData eventData) { }
     public void OnPointerDragged(MixedRealityPointerEventData eventData) { }
-
-    public void Activate()
-    {
-        transform.position = player.position + player.forward * spawnDistance;
-        transform.rotation = player.rotation;
-        isCollected = false; // reset the collected state
-        gameObject.layer = originalLayer;
-        GetComponent<Renderer>().enabled = true;
-    }
-
-    public static int GetNumCollected()
-    {
-        return numCollected;
-    }
-
-    private string GetDebuggerDisplay()
-    {
-        return ToString();
-    }
-
 }

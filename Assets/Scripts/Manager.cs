@@ -10,16 +10,16 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public enum CoinType
-{
-    AVREA,
-    SAECLA,
-    GERIT,
-    QUI,
-    PORTAM,
-    CONSTRVIT,
-    AURO
-}
+//public enum CoinType
+//{
+   // AVREA,
+   // SAECLA,
+   // GERIT,
+    //QUI,
+    //PORTAM,
+   // CONSTRVIT,
+   // AURO
+//}
 
 public enum FloatingMenuType
 {
@@ -114,7 +114,7 @@ public class Manager : MonoBehaviour
     {
         if (coins[(int)coin] != null)
         {
-            coins[(int)coin].Activate();
+            //coins[(int)coin].Activate();
             coins[(int)coin] = null;
             // Update the coin's collection status
             coinCollectedStatus[coin] = false;

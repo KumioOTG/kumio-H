@@ -13,10 +13,12 @@ public class UIManager : MonoBehaviour
     {
         public CoinType type;
         public Interactable interactable; // Using MRTK's Interactable
+        public Sprite defaultSprite;
+        public Sprite collectedSprite;
+        public CoinBehaviour coinBehaviour; // Reference to the CoinBehaviour script
     }
 
-    [SerializeField]
-    private List<CoinButton> coinButtons;
+    [SerializeField] private List<CoinButton> coinButtons;
 
     private void Awake()
     {
@@ -34,19 +36,16 @@ public class UIManager : MonoBehaviour
         CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
         if (coinButton != null && coinButton.interactable != null)
         {
-            // Get the new sprite based on the collected state
-            Sprite newSprite = collected ? GameManager.Instance.GetCollectedSprite(type) : GameManager.Instance.GetDefaultSprite(type);
-
             // Find the SpriteRenderer component in the children of the interactable
             SpriteRenderer spriteRenderer = coinButton.interactable.GetComponentInChildren<SpriteRenderer>();
             if (spriteRenderer != null)
             {
-                // Update the sprite of the SpriteRenderer
+                Sprite newSprite = collected ? coinButton.collectedSprite : coinButton.defaultSprite;
                 spriteRenderer.sprite = newSprite;
             }
             else
             {
-                Debug.LogError("SpriteRenderer not found in CoinButton interactable for type: " + type);
+                Debug.LogError("SpriteRenderer component not found for type: " + type);
             }
         }
         else
@@ -57,7 +56,16 @@ public class UIManager : MonoBehaviour
 
     public void OnCoinButtonClicked(int coinTypeInt)
     {
-        CoinType type = (CoinType)coinTypeInt; 
-        GameManager.Instance.RespawnCoin(type);
+        CoinType type = (CoinType)coinTypeInt;
+        CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
+        if (coinButton != null && coinButton.coinBehaviour != null)
+        {
+            coinButton.coinBehaviour.gameObject.SetActive(true); // Reactivate the coin
+        }
+        else
+        {
+            Debug.LogError("CoinButton or CoinBehaviour is null for type: " + type);
+        }
     }
+
 }

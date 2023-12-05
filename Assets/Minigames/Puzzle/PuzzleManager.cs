@@ -40,7 +40,7 @@ public class PuzzleManager : MonoBehaviour
                 }
             }
             finalImage.SetActive(true);
-            coin.Activate();
+            //coin.Activate();
             isCompleted = true;
         }
     }

@@ -16,8 +16,8 @@ public class AudioSourceMonitor : MonoBehaviour
 
     private void Update()
     {
-        // Check if audio is not playing and the specified object is not active
-        if (!audioSource.isPlaying && !objectToActivate.activeInHierarchy)
+        // Check if objectToActivate is not null, audio is not playing, and the specified object is not active
+        if (objectToActivate != null && !audioSource.isPlaying && !objectToActivate.activeInHierarchy)
         {
             // Activate the object
             objectToActivate.SetActive(true);
