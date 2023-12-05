@@ -60,12 +60,20 @@ public class UIManager : MonoBehaviour
         CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
         if (coinButton != null && coinButton.coinBehaviour != null)
         {
+            Debug.Log("Reactivating coin and resetting sprite for type: " + type);
             coinButton.coinBehaviour.gameObject.SetActive(true); // Reactivate the coin
+            coinButton.coinBehaviour.ResetCollection(); // Reset the collection status
+            GameManager.Instance.ResetCollectedCoin(type);
+            UpdateButtonSprite(type, false); // Reset the button sprite to default
         }
+
+   
+
         else
         {
             Debug.LogError("CoinButton or CoinBehaviour is null for type: " + type);
         }
     }
+
 
 }

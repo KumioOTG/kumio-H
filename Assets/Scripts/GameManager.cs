@@ -54,6 +54,15 @@ public class GameManager : MonoBehaviour
         return collectedCoins.ContainsKey(type) && collectedCoins[type];
     }
 
+    public void ResetCollectedCoin(CoinType type)
+    {
+        if (collectedCoins.ContainsKey(type))
+        {
+            collectedCoins[type] = false;
+            // Additional logic for resetting a single coin
+        }
+    }
+
     public void ResetCollectedCoins()
     {
         // Resetting the collection state
