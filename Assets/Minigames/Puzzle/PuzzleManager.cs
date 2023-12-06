@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] private CoinBehaviour coin;
+    
     [SerializeField] private List<SnapObjectByTags> controlPoints;
     [SerializeField] private GameObject finalImage;
+    [SerializeField] private GameObject objectToActivateOnCompletion; // Add your game object here
     [SerializeField] private bool isCompleted = false;
 
     // Start is called before the first frame update
@@ -31,17 +32,16 @@ public class PuzzleManager : MonoBehaviour
 
         if (completionCheck && !isCompleted)
         {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                Transform child = transform.GetChild(i);
-                if (child.gameObject.name != "BackPlate")
-                {
-                    child.gameObject.SetActive(false);
-                }
-            }
+           
             finalImage.SetActive(true);
             //coin.Activate();
             isCompleted = true;
+
+            // Activate the specified game object on completion
+            if (objectToActivateOnCompletion != null)
+            {
+                objectToActivateOnCompletion.SetActive(true);
+            }
         }
     }
 }
