@@ -29,10 +29,9 @@ public class UIManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        
+        // No need for DontDestroyOnLoad in UIManager
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
@@ -42,19 +41,19 @@ public class UIManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        foreach (var coinButton in coinButtons)
+        // Handle scene-specific initialization here if needed.
+
+        // Check for collected coins and update button sprites
+        foreach (CoinButton coinButton in coinButtons)
         {
-            // Assume each Interactable is tagged with a unique tag that matches its CoinType
-            GameObject interactableObject = GameObject.FindGameObjectWithTag(coinButton.type.ToString());
-            if (interactableObject != null)
-            {
-                coinButton.interactable = interactableObject.GetComponent<Interactable>();
-            }
-            else
-            {
-                Debug.LogError("Interactable object not found for type: " + coinButton.type);
-            }
+            bool isCollected = GameManager.Instance.IsCoinCollected(coinButton.type);
+            UpdateButtonSprite(coinButton.type, isCollected);
         }
+    }
+
+    public void SetCoinButtonReferences(List<CoinButton> buttons)
+    {
+        coinButtons = buttons;
     }
 
     public void UpdateButtonSprite(CoinType type, bool collected)
@@ -62,7 +61,7 @@ public class UIManager : MonoBehaviour
         CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
         if (coinButton != null && coinButton.interactable != null)
         {
-            // Find the SpriteRenderer component in the children of the interactable
+            // Update the UI button sprite here based on 'collected' state
             SpriteRenderer spriteRenderer = coinButton.interactable.GetComponentInChildren<SpriteRenderer>();
             if (spriteRenderer != null)
             {
@@ -80,7 +79,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnCoinButtonClicked(int coinTypeInt)
+  
+public void OnCoinButtonClicked(int coinTypeInt)
     {
         CoinType type = (CoinType)coinTypeInt;
         CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
@@ -89,12 +89,11 @@ public class UIManager : MonoBehaviour
             Debug.Log("Reactivating coin and resetting sprite for type: " + type);
             coinButton.coinBehaviour.gameObject.SetActive(true); // Reactivate the coin
             coinButton.coinBehaviour.ResetCollection(); // Reset the collection status
+
+            // Inform the GameManager about the collected coin
             GameManager.Instance.ResetCollectedCoin(type);
             UpdateButtonSprite(type, false); // Reset the button sprite to default
         }
-
-   
-
         else
         {
             Debug.LogError("CoinButton or CoinBehaviour is null for type: " + type);
