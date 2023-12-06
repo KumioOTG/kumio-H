@@ -4904,7 +4904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Alt\u0131n Kap\u0131'n\u0131n \xF6n\xFCne geldi\u011Finde"
+  m_text: "Alt\u0131n Kap\u0131'n\u0131n alt\u0131na geldi\u011Finde"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
