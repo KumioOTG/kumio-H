@@ -33,8 +33,8 @@ public class CoinButtonBehaviour : MonoBehaviour
         GetComponent<BoxCollider>().enabled = isCollected;
     }
 
-    public void OnButtonClick()
-    {
-        gameManager.TryReactivateCoin(coinType);
-    }
+    //public void OnButtonClick()
+    //{
+        //gameManager.TryReactivateCoin(coinType);
+    //}
 }

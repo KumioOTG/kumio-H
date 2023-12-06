@@ -47,12 +47,12 @@ public class Manager : MonoBehaviour
         return index >= 0 && index < coins.Count && coins[index] != null;
     }
 
-    public void TryReactivateCoin(CoinType coinType)
-    {
-        int index = (int)coinType;
-        if (index >= 0 && index < coins.Count && coins[index] != null)
-        {
-            coins[index].Reactivate(); // Assuming Reactivate is the method to make the coin active again
-        }
-    }
+    //public void TryReactivateCoin(CoinType coinType)
+    //{
+        //int index = (int)coinType;
+        //if (index >= 0 && index < coins.Count && coins[index] != null)
+        //{
+            //coins[index].Reactivate(); // Assuming Reactivate is the method to make the coin active again
+        //}
+    //}
 }
