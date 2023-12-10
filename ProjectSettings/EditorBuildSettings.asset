@@ -74,6 +74,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node4.unity
     guid: 922fb83dcf2876d45a6ff8a53778f2dd
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node5-1.unity
+    guid: 48dda79765cbb4c408429bcd9438546f
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node5-2.unity
+    guid: 53067f869f1c04e44a99de9bc959a803
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 69347078ef49d494d9034a4fde97d43b, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}
