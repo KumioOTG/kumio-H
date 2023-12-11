@@ -2,26 +2,20 @@ using UnityEngine;
 using Microsoft.MixedReality.Toolkit.Input;
 using System.Collections;
 
-public class ObjectActivator : MonoBehaviour
+public class ObjectActivator2 : MonoBehaviour
 {
     [SerializeField] private GameObject objectToActivate;
-    [SerializeField] private CoinBehaviour coinBehaviour;
+    [SerializeField] private ObjectBehaviour objectBehaviour;
 
     private void OnEnable()
     {
-        if (coinBehaviour != null)
+        if (objectBehaviour != null)
         {
-            coinBehaviour.OnCollect += ActivateObject;
+            objectBehaviour.OnCollect += ActivateObject;
         }
     }
 
-    //private void OnDisable()
-    //{
-        //if (coinBehaviour != null)
-        //{
-           // coinBehaviour.OnCollect -= ActivateObject;
-       // }
-   // }
+
 
     private void ActivateObject()
     {

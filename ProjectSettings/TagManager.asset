@@ -26,6 +26,14 @@ TagManager:
   - PORTAM
   - CONSTRVIT
   - AURO
+  - PuzzlePiece2
+  - PuzzlePiece7
+  - PuzzlePiece6
+  - PuzzlePiece8
+  - PuzzlePiece3
+  - PuzzlePiece4
+  - PuzzlePiece1
+  - PuzzlePiece5
   layers:
   - Default
   - TransparentFX
@@ -34,13 +42,13 @@ TagManager:
   - Water
   - UI
   - Coin Type
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - TargetAvrea
+  - TargetSaecla
+  - TargetGerit
+  - TargetQui
+  - TargetPortam
+  - TargetAuro
+  - TargetConsrvit
   - 
   - 
   - 

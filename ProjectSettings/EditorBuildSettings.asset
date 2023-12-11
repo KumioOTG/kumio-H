@@ -80,6 +80,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node5-2.unity
     guid: 53067f869f1c04e44a99de9bc959a803
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node6.unity
+    guid: 945e36eb79d6c2b4395ab53078e2d941
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node7.unity
+    guid: 975b9c8eb3e0e9342b91687de026228e
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node8.unity
+    guid: facca98d20e599e46ad973f1629cd20e
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node8-1.unity
+    guid: 92773de6a7cc8b149a332d40db0045b4
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node8-2.unity
+    guid: 3f1b152c124b774458c47b317bbf67e9
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node8-3.unity
+    guid: 019493f6c6ab41643b9bf8d7df06543f
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node9.unity
+    guid: c8ff1e8c6141cdb478540350fb1655cb
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node9-1.unity
+    guid: 7008634dc9ea1294297d7c932ca93687
+  - enabled: 1
+    path: Assets/Scenes/KGO Rota/KGO_H_node9-2.unity
+    guid: 476bdf6d855249248b31c9c270b8bc6c
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 69347078ef49d494d9034a4fde97d43b, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}

@@ -3,7 +3,7 @@ using Microsoft.MixedReality.Toolkit.Input;
 using System.Collections;
 
 
-public class ObjectBehaviour : MonoBehaviour
+public class ObjectBehaviour : MonoBehaviour, IMixedRealityPointerHandler
 {
     [SerializeField] private GameObject objectToCollect;
     [SerializeField] private GameObject soundPrefab; // Sound prefab for collection sound effect
