@@ -8,103 +8,103 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KG_Tutorial.unity
     guid: 9c26806a74985514ab2fdc0904d37b1d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node0.unity
     guid: 51c85ffaa7830f443bc77debc5189067
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node1.unity
     guid: 36e7953e85b5e9a4fa7a10bcd4e21d68
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node2.unity
     guid: 782f5afd097e67e42bcc044de3194e0b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node3.unity
     guid: fa83494b6fbb94140859a861cd19040f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node4.unity
     guid: 1003fa1717a00d7409d5528c7372cdc3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node5-1.unity
     guid: 3bee5bfdef0a62d4b9e7ef0dff04023b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node5-2.unity
     guid: 260a112c0b0afcc4990d743dd2abfdaf
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node6.unity
     guid: 2053cc9e1a4857541bfb4ccc9d50f02f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node7.unity
     guid: 8ba5618e341fbea4d91e1884f48fe065
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node8.unity
     guid: fc04e3893200fd945a1e83db1fc7e002
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node8-1.unity
     guid: b56097ff6700e15439d19bcd1a508f2f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node8-2.unity
     guid: 455980fac5d27014db76021d3f4d1beb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node8-3.unity
     guid: a760ce852f9a10348a284410983964ec
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node9.unity
     guid: 33b050b9f8d7da242816d7b0d6872d24
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node9-1.unity
     guid: e7915f445207f4048b2a10f31dda3f46
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KG Rota - SesYok/KG_H_node9-2.unity
     guid: 37bd0066d4101e641a854771e767574e
   - enabled: 0
     path: Assets/Scenes/KGO_Tutorial.unity
     guid: 55e11462020496b4c8425ff1384dbe29
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node0.unity
     guid: 51d516336c56f39498d774f88fbb4834
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node1.unity
     guid: 7575d47e79630fd419bd57a11f5a00b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node2.unity
     guid: 2bb3504537b93a441825a14ca5a47c89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node3.unity
     guid: ea08d602d96d8cd48a7536b0c31afc61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node4.unity
     guid: 922fb83dcf2876d45a6ff8a53778f2dd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node5-1.unity
     guid: 48dda79765cbb4c408429bcd9438546f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node5-2.unity
     guid: 53067f869f1c04e44a99de9bc959a803
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node6.unity
     guid: 945e36eb79d6c2b4395ab53078e2d941
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node7.unity
     guid: 975b9c8eb3e0e9342b91687de026228e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8.unity
     guid: facca98d20e599e46ad973f1629cd20e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-1.unity
     guid: 92773de6a7cc8b149a332d40db0045b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-2.unity
     guid: 3f1b152c124b774458c47b317bbf67e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-3.unity
     guid: 019493f6c6ab41643b9bf8d7df06543f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9.unity
     guid: c8ff1e8c6141cdb478540350fb1655cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9-1.unity
     guid: 7008634dc9ea1294297d7c932ca93687
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9-2.unity
     guid: 476bdf6d855249248b31c9c270b8bc6c
   m_configObjects:
