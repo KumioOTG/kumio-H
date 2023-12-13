@@ -10,13 +10,11 @@ using Microsoft.MixedReality.Toolkit.UI;
 
 public class InfoMenuButtonBehaviour4 : MonoBehaviour
 {
- 
-    [SerializeField] private GameObject infoCardPrefab;
+    [SerializeField] private GameObject infoCardInScene;
     [SerializeField] private SpriteRenderer icon;
     [SerializeField] private Sprite normalIcon;
     [SerializeField] private Sprite collectedIcon;
     [SerializeField] private Sprite openedIcon;
-    private GameObject instantiatedInfoCard;
     private ButtonState currentState = ButtonState.Collected;
     private Interactable interactable;
 
@@ -24,7 +22,12 @@ public class InfoMenuButtonBehaviour4 : MonoBehaviour
     {
         interactable = GetComponent<Interactable>();
         interactable.OnClick.AddListener(ToggleInfoCard);
-        
+
+        // Ensure the info card in the scene is initially deactivated
+        if (infoCardInScene != null)
+        {
+            infoCardInScene.SetActive(false);
+        }
     }
 
     private void ToggleInfoCard()
@@ -32,42 +35,29 @@ public class InfoMenuButtonBehaviour4 : MonoBehaviour
         switch (currentState)
         {
             case ButtonState.Opened:
-                // If in Opened state, destroy the info card, change to Collected state
-                if (instantiatedInfoCard != null)
+                // If in Opened state, deactivate the info card, change to Collected state
+                if (infoCardInScene != null)
                 {
-                    Destroy(instantiatedInfoCard);
-                    instantiatedInfoCard = null;
+                    infoCardInScene.SetActive(false);
                 }
                 icon.sprite = collectedIcon;
                 currentState = ButtonState.Collected;
                 break;
 
             case ButtonState.Collected:
-                // If in Collected state, instantiate the info card, change to Opened state
-                InstantiateInfoCard(); // Instantiate the info card
-               
-                icon.sprite = openedIcon; // Change to opened icon
+                // If in Collected state, activate the info card, change to Opened state
+                if (infoCardInScene != null)
+                {
+                    infoCardInScene.SetActive(true);
+                }
+                icon.sprite = openedIcon;
                 currentState = ButtonState.Opened;
                 break;
         }
     }
 
-    private void InstantiateInfoCard()
-    {
-        if (instantiatedInfoCard == null)
-        {
-            float distanceFromUser = 2.0f;
-            Vector3 userPosition = Camera.main.transform.position;
-            Vector3 userForward = Camera.main.transform.forward;
-            Vector3 spawnPosition = userPosition + userForward * distanceFromUser;
-            Quaternion rotation = Quaternion.Euler(0, 180, 0);
-            instantiatedInfoCard = Instantiate(infoCardPrefab, spawnPosition, rotation);
-        }
-    }
-
     private enum ButtonState
     {
-        
         Collected,
         Opened
     }
