@@ -9,7 +9,7 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
 {
     [SerializeField] private AudioSource firstAudioSource; // Assign the first AudioSource in the inspector
     [SerializeField] private AudioSource secondAudioSource; // Assign the second AudioSource in the inspector
-    [SerializeField] private GameObject infoCardPrefab;
+    [SerializeField] private GameObject infoCardInScene;
     [SerializeField] private SpriteRenderer icon;
     [SerializeField] private Sprite collectedIcon;
     [SerializeField] private Sprite openedIcon;
@@ -28,15 +28,30 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
 
     private void ToggleInfoCard()
     {
-        if (currentState == ButtonState.Opened)
+        switch (currentState)
         {
-            CloseInfoCard();
-        }
-        else if (currentState == ButtonState.Collected)
-        {
-            OpenInfoCard();
+            case ButtonState.Opened:
+                // If in Opened state, deactivate the info card, change to Collected state
+                if (infoCardInScene != null)
+                {
+                    infoCardInScene.SetActive(false);
+                }
+                icon.sprite = collectedIcon;
+                currentState = ButtonState.Collected;
+                break;
+
+            case ButtonState.Collected:
+                // If in Collected state, activate the info card, change to Opened state
+                if (infoCardInScene != null)
+                {
+                    infoCardInScene.SetActive(true);
+                }
+                icon.sprite = openedIcon;
+                currentState = ButtonState.Opened;
+                break;
         }
 
+        // Play the audio based on isFirstPress
         if (isFirstPress)
         {
             PlayAudio(firstAudioSource);
@@ -54,40 +69,6 @@ public class InfoMenuButtonBehaviour3 : MonoBehaviour
         if (audioSource != null && audioSource.isActiveAndEnabled)
         {
             audioSource.Play();
-        }
-    }
-
-    private void OpenInfoCard()
-    {
-        InstantiateInfoCard();
-        icon.sprite = openedIcon;
-        currentState = ButtonState.Opened;
-    }
-
-    private void CloseInfoCard()
-    {
-        if (instantiatedInfoCard != null)
-        {
-            Destroy(instantiatedInfoCard);
-            instantiatedInfoCard = null;
-        }
-        icon.sprite = collectedIcon;
-        currentState = ButtonState.Collected;
-    }
-
-    private void InstantiateInfoCard()
-    {
-        if (instantiatedInfoCard == null)
-        {
-            float distanceFromUser = 2.0f;
-            Vector3 userPosition = Camera.main.transform.position;
-            Vector3 userForward = Camera.main.transform.forward;
-            Vector3 spawnPosition = userPosition + userForward * distanceFromUser;
-
-            // Adjust the rotation to face the camera
-            Quaternion rotation = Quaternion.LookRotation(-userForward, Vector3.up); // This line is changed
-
-            instantiatedInfoCard = Instantiate(infoCardPrefab, spawnPosition, rotation);
         }
     }
 
