@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SORU 1
+  m_Text: SORU 2
 --- !u!222 &4635411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 30603823}
   - component: {fileID: 30603820}
   - component: {fileID: 30603819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sikke_Saecla
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 016e1b1f6e26825458e43ba4c6a6fe5e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa1f77d583f85d142b1c8efbca4e8987, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1067,7 +1067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52438661
 GameObject:
@@ -4296,7 +4296,6 @@ GameObject:
   - component: {fileID: 288944640}
   - component: {fileID: 288944639}
   - component: {fileID: 288944638}
-  - component: {fileID: 288944641}
   m_Layer: 0
   m_Name: Button A
   m_TagString: Untagged
@@ -4406,21 +4405,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288944636}
   m_CullTransparentMesh: 1
---- !u!114 &288944641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288944636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b55d3b79713c14480312d43712fbdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstObjectToActivate: {fileID: 1419835382}
-  secondObjectToActivate: {fileID: 30603817}
-  delayInSeconds: 1
 --- !u!1 &292590097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -7535,7 +7519,7 @@ MonoBehaviour:
   buttons:
   - {fileID: 288944638}
   - {fileID: 2085152110}
-  correctAnswerIndex: 0
+  correctAnswerIndex: 1
   correctSound: {fileID: 8300000, guid: 0a631caf989ffd4448920b0bd6eb0d66, type: 3}
   wrongSound: {fileID: 8300000, guid: 94d773a8bbac5cb4a84e2465223a588e, type: 3}
   popupSound: {fileID: 8300000, guid: 7aa2881f602b7224b8a291dc2ebd138e, type: 3}
@@ -15393,9 +15377,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alt\u0131n Kap\u0131  ismini MS 425 y\u0131l\u0131ndaki Ioannes Primikerios
-    zaferinden sonra yap\u0131lan alt\u0131n yald\u0131z kaplamal\u0131 kap\u0131
-    kanatlar\u0131ndan almaktad\u0131r."
+  m_Text: "Hazine Kulesi 19.yy da \xE7ok k\u0131sa bir s\xFCre hazine ve ganimetlerin
+    saklanmas\u0131 i\xE7in kullan\u0131lm\u0131\u015Ft\u0131r."
 --- !u!222 &1336935603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19373,7 +19356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21913451
+      value: -0.1191345
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20953,6 +20936,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032, y: 0.032, z: 0.015}
   m_Center: {x: 0, y: 0, z: 0.002}
+--- !u!1 &1918876306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918876308}
+  - component: {fileID: 1918876307}
+  m_Layer: 0
+  m_Name: DelayActivationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918876307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918876306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34277728cd938af4fad4783468be2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1918876308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918876306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.006969452, y: 0.12316778, z: 0.72413635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919640436
 GameObject:
   m_ObjectHideFlags: 0
@@ -22287,6 +22313,7 @@ GameObject:
   - component: {fileID: 2085152112}
   - component: {fileID: 2085152111}
   - component: {fileID: 2085152110}
+  - component: {fileID: 2085152113}
   m_Layer: 0
   m_Name: Button B
   m_TagString: Untagged
@@ -22396,6 +22423,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085152108}
   m_CullTransparentMesh: 1
+--- !u!114 &2085152113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085152108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b55d3b79713c14480312d43712fbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstObjectToActivate: {fileID: 1419835382}
+  secondObjectToActivate: {fileID: 30603817}
+  delayInSeconds: 1
 --- !u!1 &2094387221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}

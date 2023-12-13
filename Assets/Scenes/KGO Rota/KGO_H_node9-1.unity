@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d0d5d6f6673dd46bcdb8d817c55e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoCardPrefab: {fileID: 7002723536018590789, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
+  infoCardInScene: {fileID: 0}
   icon: {fileID: 962383827}
   normalIcon: {fileID: 21300000, guid: 6675fd815de39b340accf25d1e32cf53, type: 3}
   collectedIcon: {fileID: 21300000, guid: 4e5856a2bb3d1e14b82208653244edbb, type: 3}
@@ -4769,7 +4769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d0d5d6f6673dd46bcdb8d817c55e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoCardPrefab: {fileID: 7002723536018590789, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+  infoCardInScene: {fileID: 0}
   icon: {fileID: 816187006}
   normalIcon: {fileID: 21300000, guid: 6675fd815de39b340accf25d1e32cf53, type: 3}
   collectedIcon: {fileID: 21300000, guid: 4e5856a2bb3d1e14b82208653244edbb, type: 3}
@@ -14953,7 +14953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d0d5d6f6673dd46bcdb8d817c55e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoCardPrefab: {fileID: 7002723536018590789, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+  infoCardInScene: {fileID: 0}
   icon: {fileID: 1531338619}
   normalIcon: {fileID: 21300000, guid: 6675fd815de39b340accf25d1e32cf53, type: 3}
   collectedIcon: {fileID: 21300000, guid: 4e5856a2bb3d1e14b82208653244edbb, type: 3}
@@ -18933,15 +18933,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: -0.1191345
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -38.3
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalRotation.w

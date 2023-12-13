@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SORU 1
+  m_Text: SORU 5
 --- !u!222 &4635411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15053,9 +15053,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alt\u0131n Kap\u0131  ismini MS 425 y\u0131l\u0131ndaki Ioannes Primikerios
-    zaferinden sonra yap\u0131lan alt\u0131n yald\u0131z kaplamal\u0131 kap\u0131
-    kanatlar\u0131ndan almaktad\u0131r."
+  m_Text: "Osmanl\u0131\u2019n\u0131n 16. padi\u015Fah\u0131 olan 2. Osman, bir Yeni\xE7eri
+    ayaklanmas\u0131 sonucun da G\xFCney Pilon'da bir odada bo\u011Fulmu\u015Ftur."
 --- !u!222 &1336935603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20618,15 +20617,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: -0.1191345
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -38.3
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalRotation.w

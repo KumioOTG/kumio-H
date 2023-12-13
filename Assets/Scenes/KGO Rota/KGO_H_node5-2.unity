@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SORU 1
+  m_Text: SORU 4
 --- !u!222 &4635411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,6 @@ GameObject:
   - component: {fileID: 288944640}
   - component: {fileID: 288944639}
   - component: {fileID: 288944638}
-  - component: {fileID: 288944641}
   m_Layer: 0
   m_Name: Button A
   m_TagString: Untagged
@@ -5200,21 +5199,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288944636}
   m_CullTransparentMesh: 1
---- !u!114 &288944641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288944636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b55d3b79713c14480312d43712fbdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstObjectToActivate: {fileID: 198576252}
-  secondObjectToActivate: {fileID: 1916567374}
-  delayInSeconds: 1
 --- !u!1 &292590097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -5505,6 +5489,7 @@ Transform:
   - {fileID: 1110360780}
   - {fileID: 1694527354}
   - {fileID: 635198460}
+  - {fileID: 1557394518}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8968,7 +8953,7 @@ MonoBehaviour:
   buttons:
   - {fileID: 288944638}
   - {fileID: 2085152110}
-  correctAnswerIndex: 0
+  correctAnswerIndex: 1
   correctSound: {fileID: 8300000, guid: 0a631caf989ffd4448920b0bd6eb0d66, type: 3}
   wrongSound: {fileID: 8300000, guid: 94d773a8bbac5cb4a84e2465223a588e, type: 3}
   popupSound: {fileID: 8300000, guid: 7aa2881f602b7224b8a291dc2ebd138e, type: 3}
@@ -17462,9 +17447,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alt\u0131n Kap\u0131  ismini MS 425 y\u0131l\u0131ndaki Ioannes Primikerios
-    zaferinden sonra yap\u0131lan alt\u0131n yald\u0131z kaplamal\u0131 kap\u0131
-    kanatlar\u0131ndan almaktad\u0131r."
+  m_Text: "Me\u015Fhur Y\u0131lanl\u0131 Kuyu'nun bulundu\u011Fu Kitabeler Kulesi'nde
+    sadece m\xFCsl\xFCman mahkumlar kal\u0131rd\u0131."
 --- !u!222 &1336935603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19398,6 +19382,51 @@ MonoBehaviour:
   showHandleForX: 1
   showHandleForY: 1
   showHandleForZ: 0
+--- !u!1 &1557394517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557394518}
+  - component: {fileID: 1557394519}
+  m_Layer: 0
+  m_Name: PuzzleActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557394518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557394517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 317839835}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557394519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557394517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a69af52ff4aef428c1dd924e43e785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 1177879797}
+  objectBehaviour: {fileID: 198576261}
 --- !u!1001 &1593673901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21669,15 +21698,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: -0.1191345
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -38.3
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23207,12 +23236,55 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916567374}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1177879797}
+--- !u!1 &1918876306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918876308}
+  - component: {fileID: 1918876307}
+  m_Layer: 0
+  m_Name: DelayActivationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918876307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918876306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34277728cd938af4fad4783468be2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1918876308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918876306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.006969452, y: 0.12316778, z: 0.72413635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919640436
 GameObject:
   m_ObjectHideFlags: 0
@@ -24547,6 +24619,7 @@ GameObject:
   - component: {fileID: 2085152112}
   - component: {fileID: 2085152111}
   - component: {fileID: 2085152110}
+  - component: {fileID: 2085152113}
   m_Layer: 0
   m_Name: Button B
   m_TagString: Untagged
@@ -24656,6 +24729,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085152108}
   m_CullTransparentMesh: 1
+--- !u!114 &2085152113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085152108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b55d3b79713c14480312d43712fbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstObjectToActivate: {fileID: 198576252}
+  secondObjectToActivate: {fileID: 1916567374}
+  delayInSeconds: 1
 --- !u!1 &2094387221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
