@@ -8,6 +8,7 @@ public class SnapObjectByTags : MonoBehaviour, IMixedRealityPointerHandler
 {
     [SerializeField] List<string> tagsToSnap;
     [SerializeField] Transform objectToSnap = null;
+    [SerializeField] private AudioSource snapSound; // Reference to the AudioSource component
 
     // Property with public getter and private setter
     public bool Snapped { get; private set; } = false;
@@ -67,6 +68,12 @@ public class SnapObjectByTags : MonoBehaviour, IMixedRealityPointerHandler
             objectToSnap.position = transform.position;
             objectToSnap.rotation = transform.rotation;
             Snapped = true;
+
+            // Play the snapping sound
+            if (snapSound != null)
+            {
+                snapSound.Play();
+            }
         }
     }
 
