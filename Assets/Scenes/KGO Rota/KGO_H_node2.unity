@@ -13526,10 +13526,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1194454295149507061, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d58e3f6a42f004e801e40dab719785, type: 3}
     - target: {fileID: 1657761657195525024, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1657761657195525024, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 1101453819}
     - target: {fileID: 3506593248317580895, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -13603,6 +13611,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7002723536018590789, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
   m_PrefabInstance: {fileID: 1101453812}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1101453819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2465844094447033242, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+  m_PrefabInstance: {fileID: 1101453812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101453814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1103169244
 GameObject:
   m_ObjectHideFlags: 0
@@ -19412,7 +19431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298769142206, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.298
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298769142207, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_IsActive
@@ -20549,7 +20568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: KGO_H_node3
   buttonToActivate: {fileID: 1892745983}
-  delayInSeconds: 0
+  delayInSeconds: 1
 --- !u!114 &1892745981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22483,7 +22502,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a639f75215c756b4c8d4810504c429f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d03bec709c68b64fba4049bfab4bc6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22652,6 +22671,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 242962484}
     m_Modifications:
+    - target: {fileID: 1194454295149507061, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d58e3f6a42f004e801e40dab719785, type: 3}
+    - target: {fileID: 1657761657195525024, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 2108014182}
     - target: {fileID: 5110844696819777873, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -22716,6 +22743,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7002723536018590789, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
   m_PrefabInstance: {fileID: 2108014176}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108014182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2465844094447033242, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+  m_PrefabInstance: {fileID: 2108014176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108014178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2110827533
 PrefabInstance:
   m_ObjectHideFlags: 0

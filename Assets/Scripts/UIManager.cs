@@ -79,8 +79,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-  
-public void OnCoinButtonClicked(int coinTypeInt)
+
+    public void OnCoinButtonClicked(int coinTypeInt)
     {
         CoinType type = (CoinType)coinTypeInt;
         CoinButton coinButton = coinButtons.Find(cb => cb.type == type);
