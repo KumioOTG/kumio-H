@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects:
   - {fileID: 425367506}
-  delayInSeconds: 52
+  delayInSeconds: 45
 --- !u!1 &451804449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6675,7 +6675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects:
   - {fileID: 1828097019}
-  delayInSeconds: 52
+  delayInSeconds: 45
 --- !u!1001 &1851988050
 PrefabInstance:
   m_ObjectHideFlags: 0
