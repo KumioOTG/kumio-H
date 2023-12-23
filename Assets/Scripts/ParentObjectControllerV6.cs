@@ -9,7 +9,7 @@ public class ParentObjectControllerV6: MonoBehaviour
     [SerializeField]
     private PressableButtonHoloLens2 button;
     [SerializeField]
-    private float delayInSeconds = 0.0f;
+    private float delayInSeconds;
 
     private void Start()
     {
