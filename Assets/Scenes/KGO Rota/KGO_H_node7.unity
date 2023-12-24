@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 110288913}
   - component: {fileID: 110288912}
   - component: {fileID: 110288911}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-1-n1-avrea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   localUp: {x: 0, y: 1, z: 0}
   localCenter: {x: 0, y: 0, z: 0}
   bounds: {x: 0, y: 0}
-  touchableCollider: {fileID: 0}
+  touchableCollider: {fileID: 143848648}
 --- !u!114 &143848647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,6 +1730,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTetherWhenManipulating: 0
   IsBoundsHandles: 0
+--- !u!65 &143848648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143848643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6474448, y: 0.26816598, z: 0.050102767}
+  m_Center: {x: -0.12206318, y: -0.04330539, z: 0.063421205}
 --- !u!1 &158487784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5676948298715251279, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
@@ -1798,7 +1811,7 @@ GameObject:
   - component: {fileID: 175387720}
   - component: {fileID: 175387719}
   - component: {fileID: 175387718}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-7-n9.1-auro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1895,7 +1908,7 @@ GameObject:
   - component: {fileID: 193507813}
   - component: {fileID: 193507812}
   - component: {fileID: 193507814}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Sikke_Constrvit
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -2964,7 +2977,7 @@ GameObject:
   - component: {fileID: 240687636}
   - component: {fileID: 240687635}
   - component: {fileID: 240687634}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-6-n8.2-constrvit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3173,7 +3186,7 @@ GameObject:
   - component: {fileID: 257094377}
   - component: {fileID: 257094376}
   - component: {fileID: 257094378}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sikke_Qui
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -4215,8 +4228,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 143848642}
-  - {fileID: 451804451}
   - {fileID: 2001008659}
+  - {fileID: 451804451}
   - {fileID: 1916567376}
   - {fileID: 1544566259}
   - {fileID: 242962484}
@@ -4529,7 +4542,7 @@ GameObject:
   - component: {fileID: 401079367}
   - component: {fileID: 401079365}
   - component: {fileID: 401079361}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sikke_Avrea
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -4960,7 +4973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 317839835}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &451804452
 MonoBehaviour:
@@ -6369,7 +6382,7 @@ GameObject:
   - component: {fileID: 525139120}
   - component: {fileID: 525139119}
   - component: {fileID: 525139118}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nesne-1-n5.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8195,7 +8208,7 @@ GameObject:
   - component: {fileID: 580333602}
   - component: {fileID: 580333601}
   - component: {fileID: 580333600}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nesne-2-n8.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9335,7 +9348,7 @@ GameObject:
   - component: {fileID: 665635932}
   - component: {fileID: 665635931}
   - component: {fileID: 665635930}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-2-n2-saecla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10930,7 +10943,7 @@ GameObject:
   - component: {fileID: 784563098}
   - component: {fileID: 784563097}
   - component: {fileID: 784563096}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nesne-3-n8.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11026,7 +11039,7 @@ GameObject:
   - component: {fileID: 786089183}
   - component: {fileID: 786089180}
   - component: {fileID: 786089179}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Sikke_Gerit
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -12337,7 +12350,7 @@ GameObject:
   - component: {fileID: 891581067}
   - component: {fileID: 891581066}
   - component: {fileID: 891581065}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-5-n8.1-portam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13343,7 +13356,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1
+  near clip plane: 0.5
   far clip plane: 10000
   field of view: 60
   orthographic: 0
@@ -14113,7 +14126,7 @@ GameObject:
   - component: {fileID: 1212356964}
   - component: {fileID: 1212356963}
   - component: {fileID: 1212356965}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Sikke_Auro
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -14765,7 +14778,7 @@ GameObject:
   - component: {fileID: 1247378028}
   - component: {fileID: 1247378027}
   - component: {fileID: 1247378029}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Sikke_Portam
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -17287,6 +17300,7 @@ GameObject:
   - component: {fileID: 1544566259}
   - component: {fileID: 1544566261}
   - component: {fileID: 1544566260}
+  - component: {fileID: 1544566262}
   m_Layer: 0
   m_Name: StartNextSceneButton
   m_TagString: Untagged
@@ -17368,6 +17382,102 @@ MonoBehaviour:
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
   updateSolvers: 1
+--- !u!82 &1544566262
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544566258}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 070779cdcfbe3ff4688691fb33bc3e4e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1553815751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18012,7 +18122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.09, y: -0.005}
+  m_AnchoredPosition: {x: -0.073, y: -0.005}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643837488
@@ -20739,7 +20849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4650336334853332708, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: drawBoundsGizmo
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4885525298838860138, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_IsActive
@@ -21099,7 +21209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -21115,15 +21225,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1191345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298659952591, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21175,7 +21285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298769142206, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.298
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676948298769142207, guid: 9ef654312d26a6743af904631a9c1b8e, type: 3}
       propertyPath: m_IsActive
@@ -21733,7 +21843,7 @@ GameObject:
   - component: {fileID: 1843746704}
   - component: {fileID: 1843746703}
   - component: {fileID: 1843746702}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-4-n5.2-qui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25161,7 +25271,7 @@ GameObject:
   - component: {fileID: 1993713458}
   - component: {fileID: 1993713457}
   - component: {fileID: 1993713456}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nesne-4-n8.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25572,7 +25682,7 @@ GameObject:
   - component: {fileID: 2030558314}
   - component: {fileID: 2030558313}
   - component: {fileID: 2030558312}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: sikke-3-n4-gerit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
