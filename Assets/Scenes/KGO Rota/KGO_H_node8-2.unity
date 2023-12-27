@@ -1045,11 +1045,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 51962371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 999e9d0cb94f67a429409dbbc2ace22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
-  coinBehaviour: {fileID: 786089179}
+  coinBehaviour: {fileID: 193507814}
+  activationDelay: 30
 --- !u!4 &51962373
 Transform:
   m_ObjectHideFlags: 0
@@ -2087,7 +2088,6 @@ GameObject:
   - component: {fileID: 193507813}
   - component: {fileID: 193507812}
   - component: {fileID: 193507814}
-  - component: {fileID: 193507815}
   m_Layer: 0
   m_Name: Sikke_Constrvit
   m_TagString: Collectible
@@ -2271,20 +2271,6 @@ MonoBehaviour:
   objectToCollect: {fileID: 193507810}
   soundPrefab: {fileID: 1593853365}
   type: 5
---- !u!114 &193507815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193507810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 1544566258}
-  coinBehaviour: {fileID: 193507814}
 --- !u!114 &193507816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5560,7 +5546,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a9832ee0a66f2bf46bdafb6c36e0ccc6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -22555,7 +22541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1916567376}
   - component: {fileID: 1916567375}
-  - component: {fileID: 1916567377}
   m_Layer: 0
   m_Name: Anlati2
   m_TagString: Untagged
@@ -22573,7 +22558,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 96866ad175be140459e7516013a5fd8e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -22673,19 +22658,6 @@ Transform:
   m_Father: {fileID: 317839835}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1916567377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916567374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e7d1be941cd2a4689b166987c82ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 1544566258}
 --- !u!1 &1919640436
 GameObject:
   m_ObjectHideFlags: 0

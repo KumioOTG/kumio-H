@@ -1028,11 +1028,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 51962371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 999e9d0cb94f67a429409dbbc2ace22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
   coinBehaviour: {fileID: 257094378}
+  activationDelay: 30
 --- !u!4 &51962373
 Transform:
   m_ObjectHideFlags: 0
@@ -6575,7 +6576,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cc82d29212d1d4b4bbd5b3aa54a6813d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -15714,7 +15715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177879797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4358771b0f75ba4429dc3fb0cf998df1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ac36af26dfdee2469c71ec0f9e109dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controlPoints:
@@ -15727,7 +15728,8 @@ MonoBehaviour:
   - {fileID: 914311565}
   - {fileID: 168310451}
   finalImage: {fileID: 97583511}
-  objectToActivateOnCompletion: {fileID: 257094374}
+  objectToActivateOnCompletion1: {fileID: 257094374}
+  objectToActivateOnCompletion2: {fileID: 1916567374}
   isCompleted: 0
 --- !u!4 &1188491049 stripped
 Transform:
@@ -23739,7 +23741,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 800ebc0c50e3ec64fa080b9934f21ab7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -25352,7 +25354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstObjectToActivate: {fileID: 198576252}
-  secondObjectToActivate: {fileID: 1916567374}
+  secondObjectToActivate: {fileID: 0}
   delayInSeconds: 1
 --- !u!1 &2094387221 stripped
 GameObject:

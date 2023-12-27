@@ -967,11 +967,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 51962371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 999e9d0cb94f67a429409dbbc2ace22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
   coinBehaviour: {fileID: 786089179}
+  activationDelay: 30
 --- !u!4 &51962373
 Transform:
   m_ObjectHideFlags: 0
@@ -5455,7 +5456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b55d3b79713c14480312d43712fbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstObjectToActivate: {fileID: 1916567374}
+  firstObjectToActivate: {fileID: 0}
   secondObjectToActivate: {fileID: 1177879797}
   delayInSeconds: 1
 --- !u!1 &292590097 stripped
@@ -6396,7 +6397,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e16ecd4bf66bf7418d9662ed249fcf3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -16539,7 +16540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177879797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4358771b0f75ba4429dc3fb0cf998df1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ac36af26dfdee2469c71ec0f9e109dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controlPoints:
@@ -16552,7 +16553,8 @@ MonoBehaviour:
   - {fileID: 914311565}
   - {fileID: 168310451}
   finalImage: {fileID: 97583511}
-  objectToActivateOnCompletion: {fileID: 786089177}
+  objectToActivateOnCompletion1: {fileID: 786089177}
+  objectToActivateOnCompletion2: {fileID: 1916567374}
   isCompleted: 0
 --- !u!4 &1188491049 stripped
 Transform:
@@ -24403,7 +24405,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0211704d2e06fe24cbfb841c3bf07ea5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

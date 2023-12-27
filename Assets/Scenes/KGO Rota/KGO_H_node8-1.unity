@@ -840,11 +840,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 51962371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 999e9d0cb94f67a429409dbbc2ace22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
-  coinBehaviour: {fileID: 786089179}
+  coinBehaviour: {fileID: 1247378029}
+  activationDelay: 60
 --- !u!4 &51962373
 Transform:
   m_ObjectHideFlags: 0
@@ -4942,7 +4943,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4bd0a4722ffe2f94485ea0776372eaa0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13369,7 +13370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a0b447892e4014a9cde08789403e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 1544566258}
+  objectToActivate: {fileID: 1916567374}
   coinBehaviour: {fileID: 1247378029}
 --- !u!114 &1247378031
 MonoBehaviour:
@@ -16015,11 +16016,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1ca041097398fa14aa16181eb66454d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 7a8c61db2d6eb4646a8c36dd8489cb6c, type: 2}
     - target: {fileID: -7511558181221131132, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 1ca041097398fa14aa16181eb66454d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 7a8c61db2d6eb4646a8c36dd8489cb6c, type: 2}
     - target: {fileID: 919132149155446097, guid: b16fa7122b4e8504f8fa8b80644067fe, type: 3}
       propertyPath: m_Name
       value: mermi
@@ -20221,7 +20222,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c627f222496140445a3ec4cddf6224a9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

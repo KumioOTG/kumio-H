@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
-  delayInSeconds: 20
+  delayInSeconds: 5
 --- !u!1 &487866777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,7 +3253,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1
+  near clip plane: 0.5
   far clip plane: 10000
   field of view: 60
   orthographic: 0
