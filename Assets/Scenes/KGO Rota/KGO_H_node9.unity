@@ -19949,6 +19949,19 @@ MonoBehaviour:
   localCenter: {x: 0.011074027, y: 0.0046103606, z: -0.18748645}
   bounds: {x: 0.04567471, y: 0.5184659}
   touchableCollider: {fileID: 2115758488}
+--- !u!114 &2115758490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115758484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3af60ec3a50c4bbbaa32c208cd285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayInSeconds: 25
 --- !u!1 &2119670103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1911902818, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}

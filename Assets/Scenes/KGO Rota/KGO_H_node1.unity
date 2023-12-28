@@ -15045,11 +15045,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 50
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -15246,7 +15246,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 101}
-  m_SizeDelta: {x: 2165.5, y: 178.8}
+  m_SizeDelta: {x: 1375, y: 294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336935602
 MonoBehaviour:
@@ -15270,18 +15270,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alt\u0131n Kap\u0131  ismini MS 425 y\u0131l\u0131ndaki Ioannes Primikerios
+  m_Text: "Alt\u0131n Kap\u0131 ismini MS 425 y\u0131l\u0131ndaki Ioannes Primikerios
     zaferinden sonra yap\u0131lan alt\u0131n yald\u0131z kaplamal\u0131 kap\u0131
     kanatlar\u0131ndan almaktad\u0131r."
 --- !u!222 &1336935603
@@ -15692,11 +15692,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 50
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
