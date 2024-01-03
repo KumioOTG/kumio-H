@@ -7102,6 +7102,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 242962484}
     m_Modifications:
+    - target: {fileID: 1194454295149507061, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d58e3f6a42f004e801e40dab719785, type: 3}
+    - target: {fileID: 1657761657195525024, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 491911978}
     - target: {fileID: 5110844696819777873, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7166,6 +7174,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7002723536018590789, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
   m_PrefabInstance: {fileID: 491911975}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &491911978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2465844094447033242, guid: 8ed1ec86f583cba45aeda45bad56dcfc, type: 3}
+  m_PrefabInstance: {fileID: 491911975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491911977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496124294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 316800718, guid: 45fd0ad89d6d17b4fbe68eb48dbe9de9, type: 3}
@@ -15500,7 +15519,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.5
+  near clip plane: 0.2
   far clip plane: 10000
   field of view: 60
   orthographic: 0
@@ -15818,10 +15837,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1194454295149507061, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d58e3f6a42f004e801e40dab719785, type: 3}
     - target: {fileID: 1657761657195525024, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1657761657195525024, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 491911978}
     - target: {fileID: 3506593248317580895, guid: 38d77e50bd3ec2147be87172e78c2c1e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -27668,6 +27695,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 242962484}
     m_Modifications:
+    - target: {fileID: 1194454295149507061, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0d58e3f6a42f004e801e40dab719785, type: 3}
+    - target: {fileID: 1657761657195525024, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
+      propertyPath: constraintsManager
+      value: 
+      objectReference: {fileID: 491911978}
     - target: {fileID: 5110844696819777873, guid: a81ee3a82fa614244b8f4ffcdfd224ee, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -62,52 +62,52 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KGO_PuzzleTutorial.unity
     guid: fb17ddd7b9dcc804d81ea471c2725492
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node0.unity
     guid: 51d516336c56f39498d774f88fbb4834
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node1.unity
     guid: 7575d47e79630fd419bd57a11f5a00b6
   - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node2.unity
     guid: 2bb3504537b93a441825a14ca5a47c89
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node3.unity
     guid: ea08d602d96d8cd48a7536b0c31afc61
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node4.unity
     guid: 922fb83dcf2876d45a6ff8a53778f2dd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node5-1.unity
     guid: 48dda79765cbb4c408429bcd9438546f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node5-2.unity
     guid: 53067f869f1c04e44a99de9bc959a803
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node6.unity
     guid: 945e36eb79d6c2b4395ab53078e2d941
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node7.unity
     guid: 975b9c8eb3e0e9342b91687de026228e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node8.unity
     guid: facca98d20e599e46ad973f1629cd20e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node8-1.unity
     guid: 92773de6a7cc8b149a332d40db0045b4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node8-2.unity
     guid: 3f1b152c124b774458c47b317bbf67e9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node8-3.unity
     guid: 019493f6c6ab41643b9bf8d7df06543f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node9.unity
     guid: c8ff1e8c6141cdb478540350fb1655cb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node9-1.unity
     guid: 7008634dc9ea1294297d7c932ca93687
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KGO Rota/KGO_H_node9-2.unity
     guid: 476bdf6d855249248b31c9c270b8bc6c
   m_configObjects:
