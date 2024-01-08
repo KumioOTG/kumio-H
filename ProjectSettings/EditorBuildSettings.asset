@@ -62,54 +62,150 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KGO_PuzzleTutorial.unity
     guid: fb17ddd7b9dcc804d81ea471c2725492
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node0.unity
     guid: 51d516336c56f39498d774f88fbb4834
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node1.unity
     guid: 7575d47e79630fd419bd57a11f5a00b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node2.unity
     guid: 2bb3504537b93a441825a14ca5a47c89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node3.unity
     guid: ea08d602d96d8cd48a7536b0c31afc61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node4.unity
     guid: 922fb83dcf2876d45a6ff8a53778f2dd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node5-1.unity
     guid: 48dda79765cbb4c408429bcd9438546f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node5-2.unity
     guid: 53067f869f1c04e44a99de9bc959a803
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node6.unity
     guid: 945e36eb79d6c2b4395ab53078e2d941
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node7.unity
     guid: 975b9c8eb3e0e9342b91687de026228e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8.unity
     guid: facca98d20e599e46ad973f1629cd20e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-1.unity
     guid: 92773de6a7cc8b149a332d40db0045b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-2.unity
     guid: 3f1b152c124b774458c47b317bbf67e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node8-3.unity
     guid: 019493f6c6ab41643b9bf8d7df06543f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9.unity
     guid: c8ff1e8c6141cdb478540350fb1655cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9-1.unity
     guid: 7008634dc9ea1294297d7c932ca93687
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KGO Rota/KGO_H_node9-2.unity
     guid: 476bdf6d855249248b31c9c270b8bc6c
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node0.unity
+    guid: ba89e907374d2a24c8cf99de339d1757
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node1.unity
+    guid: 9afb2a98bbf73934a99fc691203d3fb9
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node2.unity
+    guid: defd6073784643a45b5cd4e54b62a74f
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node3.unity
+    guid: 15385eeba5eed5448996304c0e9b0fd8
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node4.unity
+    guid: 9727fc69f60fba349b5fd9fec7b6043b
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node5-1.unity
+    guid: d1d0c196933af9049a0d259d97c3214e
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node5-2.unity
+    guid: 929a05abe9a4ff545b4e19641a9c97f7
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node6.unity
+    guid: 867b7da0a3adb214aa1bde6b3841ef91
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node7.unity
+    guid: d714f5e94d7d718478ffdc67d74b81f6
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node8.unity
+    guid: a6b0a6fb8fd99d74fb523b32b53db85d
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node8-1.unity
+    guid: a206da4142c499a41a651d0709bcbd2b
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node8-2.unity
+    guid: bfdb9353ccaf1e643afe600489b7b331
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node8-3.unity
+    guid: 797e629a49f3c6347ae1c38ea7179e88
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node9.unity
+    guid: 22e4d96297f84594ba32b1d00d47f8fc
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node9-1.unity
+    guid: e254a07332cf09b4e9cba52baf13260a
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KG Rota/KG_H_node9-2.unity
+    guid: e6727200b243ae6479b91ca162750b11
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node0.unity
+    guid: a40a191797599a749ad60ae43b98e738
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node1.unity
+    guid: afb1174719ee678419b7eae2ae6d8391
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node2.unity
+    guid: 83c442ddee984754f8841a21c1c04ee0
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node3.unity
+    guid: 4319171b27ea14942bebad725f15d5d4
+  - enabled: 1
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node4.unity
+    guid: 0350730465ba26a40819cb66e72b6021
+  - enabled: 1
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node5-1.unity
+    guid: 8fadba85915c3194897b84bc9d2b2ba3
+  - enabled: 1
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node5-2.unity
+    guid: df61795dda2baa143bde16b0a1ab7730
+  - enabled: 1
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node6.unity
+    guid: 72544cdf2d5b8124aba93d6787855a59
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node7.unity
+    guid: 37b4a01360fc5684094db9c14c3c3522
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node8.unity
+    guid: a8230ed220bf763468bd8c010b7ff770
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node8-1.unity
+    guid: c4f6dc099e583ba40af08d2a5f786d4a
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node8-2.unity
+    guid: fa3ca8ae8fd297049bb3048fe6943980
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node8-3.unity
+    guid: f4c3f0459e057294daa4c4e1ac950d61
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node9.unity
+    guid: e6e43601b1cfb1f4297b9779cd316afe
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node9-1.unity
+    guid: b1a14b4d3ba65a64eaaf2641e3fb7aa9
+  - enabled: 0
+    path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node9-2.unity
+    guid: 2052b7e695c321741b681581edaed043
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 69347078ef49d494d9034a4fde97d43b, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 38d23e7a84630684eac580f3ef4c1662, type: 2}
