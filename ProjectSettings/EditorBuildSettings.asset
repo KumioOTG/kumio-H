@@ -170,16 +170,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node3.unity
     guid: 4319171b27ea14942bebad725f15d5d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node4.unity
     guid: 0350730465ba26a40819cb66e72b6021
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node5-1.unity
     guid: 8fadba85915c3194897b84bc9d2b2ba3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node5-2.unity
     guid: df61795dda2baa143bde16b0a1ab7730
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kopya-KGO Rota/KGO_H_node6.unity
     guid: 72544cdf2d5b8124aba93d6787855a59
   - enabled: 0
