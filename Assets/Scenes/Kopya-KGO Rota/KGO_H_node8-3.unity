@@ -4911,7 +4911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1544566258}
-  delayInSeconds: 3
+  delayInSeconds: 30
 --- !u!1001 &452283056
 PrefabInstance:
   m_ObjectHideFlags: 0
