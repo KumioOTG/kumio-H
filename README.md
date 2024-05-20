@@ -25,6 +25,10 @@ Utilize diegetic elements and historical decorations to add to the immersive exp
 - Download the Kumio-H project as a zip file from this repository.
 - Extract the zip file to a desired location on your computer.
 - Open the extracted project in Unity.
+- Go to Window > Package Manager.
+- Click on the "+" button and select "Add package from git URL..."
+- Enter the MRTK 2 GitHub URL: https://github.com/microsoft/MixedRealityToolkit-Unity.git?path=/Assets/MRTK.
+- Click "Add" to import the MRTK 2 toolkit into your project.
 - In Unity, go to File > Build Settings.
 - Select Universal Windows Platform as the target platform.
 - Set the Target Device to HoloLens and the Architecture to x86.
